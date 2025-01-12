@@ -1,10 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
      return (
           <header className="bg-black text-white p-4">
                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-2xl font-bold">LATAM PRODUCTS</h1>
+                    <Image
+                         src="/images/logolatam.webp"
+                         alt="Logo de LATAM PRODUCTS"                         
+                         width={80}
+                         height={100}
+                    />
                     <nav className="hidden md:flex space-x-4">
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
