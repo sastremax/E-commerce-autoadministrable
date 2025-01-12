@@ -1,20 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-const tailwindConfig = {
+export default {
      content: [
-          "./app/**/*.{js,ts,jsx,tsx}",
+          "./app/**/*.{js,ts,jsx,tsx}", 
+          "./pages/**/*.{js,ts,jsx,tsx}", 
           "./components/**/*.{js,ts,jsx,tsx}",
-          "./pages/**/*.{js,ts,jsx,tsx}",
-          "./public/**/*.html",
+          "./node_modules/@nextui-org/react/**/*.js", 
      ],
      theme: {
-          extend: {
-               container: {
-                    center: true, 
-                    padding: "1rem", 
-               },
-          },
+          extend: {},
      },
      plugins: [],
 };
-
-export default tailwindConfig;
