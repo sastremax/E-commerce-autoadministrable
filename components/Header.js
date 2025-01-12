@@ -3,14 +3,20 @@ import Image from "next/image";
 
 export default function Header() {
      return (
-          <header className="bg-black text-white p-4">
+          <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white">
                <div className="container mx-auto flex justify-between items-center">
-                    <Image
-                         src="/images/logolatam.webp"
-                         alt="Logo de LATAM PRODUCTS"                         
-                         width={80}
-                         height={100}
-                    />
+                    <div className="flex items-center">
+                         <Image
+                              src="/images/logolatam.webp"
+                              alt="Logo de LATAM PRODUCTS"
+                              width={70}
+                              height={80}
+                              className="rounded-lg"
+                         />
+                         <span className="ml-2 text-xl font-bold tracking-wide">
+                              PRODUCTOS LATAM
+                         </span>
+                    </div>
                     <nav className="hidden md:flex space-x-4">
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
@@ -46,7 +52,7 @@ export default function Header() {
                               />
                          </svg>
                     </button>
-               </div>
-          </header>
+               </div>          
+          </header >
      );
 }
