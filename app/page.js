@@ -4,10 +4,11 @@ import { useState } from "react";
 import Button from "../components/button";
 
 function HomePage() {
-     cont 
-     const handleClick = () => {
-          alert("Bienvenidos a PRODUCTOS LATAM");
-     };
+     const [count, setCount] = useState(0);
+     const incrementarContador = () => {
+          console.log("Contador actual:", count);
+          setCount(count + 1);
+     }
 
      return (
           <div className="relative min-h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/fondoPantallaLatam.webp')" }}>
@@ -20,7 +21,10 @@ function HomePage() {
                               Productos Latam tiene una amplia trayectoria en la venta de
                               productos para el hogar.
                          </p>
-                         <Button onClick={handleClick}>Explorar Productos</Button>
+                         <p className="text-2xl font-bold mb-4 text-blue-500">
+                              Contador: {count}
+                         </p>
+                         <Button onClick={incrementarContador}>Incrementar</Button>
                     </div>
                </div>
           </div>

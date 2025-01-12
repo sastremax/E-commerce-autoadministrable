@@ -28,3 +28,23 @@ h1 {
 #menu {
   transition: max-height 0.4s ease-in-out;
 }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer .redes a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .redes a:hover {
+    color: #f39c12;
+}
+
+

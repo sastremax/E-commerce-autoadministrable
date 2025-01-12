@@ -1,7 +1,7 @@
 import "./globals.css";
 import { metadata } from "./metadata";
 import ClientLayout from "../components/clientLayout.js";
-
+import { Footer } from "../components/Footer";
 
 
 function RootLayout({ children }) {
@@ -14,7 +14,9 @@ function RootLayout({ children }) {
                </head>
                <body>
                     <ClientLayout>{children}</ClientLayout>
+                    <Footer />
                </body>
+               
           </html>
      );
 }
