@@ -1,12 +1,19 @@
 import "./globals.css";
-import Header from "../components/Header";
+import { metadata } from "./metadata";
+import ClientLayout from "../components/clientLayout.js";
+
+
 
 function RootLayout({ children }) {
      return (
-          <html lang="en">
+          <html lang="es">
+               <head>
+                    <title>{metadata.title}</title>
+                    <meta name="description" content={metadata.description} />
+                    <link rel="icon" href="/favicon.png" type="image/png" />
+               </head>
                <body>
-                    <Header />
-                    {children}
+                    <ClientLayout>{children}</ClientLayout>
                </body>
           </html>
      );

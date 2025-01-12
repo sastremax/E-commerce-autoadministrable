@@ -1,34 +1,26 @@
-export const metadata = {
-     metadataBase: new URL("http://localhost:3000"),
-     title: "LATAM PRODUCTS - Bienvenidos",
-     description: "LATAM PRODUCTS es una tienda virtual que vende productos electrónicos a toda Latinoamérica.",
-     keywords: ["LATAM PRODUCTS", "productos electrónicos para el hogar", "e-commerce", "Latinoamérica"],
-     openGraph: {
-          title: "LATAM PRODUCTS",
-          description: "LATAM PRODUCTS es una tienda virtual que vende productos electrónicos a toda Latinoamérica.",
-          images: [
-               {
-                    url: "/images/logolatam.webp",
-                    width: 800,
-                    height: 600,
-                    alt: "Logo de LATAM PRODUCTS",
-               },
-          ],
-     },
-};
-
+"use client";
+import Button from "../components/button";
 
 function HomePage() {
+     const handleClick = () => {
+          alert("Bienvenidos a PRODUCTOS LATAM");
+     };
+
      return (
-          <main className="container mx-auto flex flex-col items-center justify-center min-h-screen text-center">
-               <h1 className="text-4xl font-bold mb-4">
-                    Bienvenidos!
-               </h1>
-               <p className="text-lg text-gray-700">
-                    Productos Latam tiene una amplia trayectoria en la venta de
-                    productos para el hogar.
-               </p>
-          </main>
+          <div className="relative min-h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/fondoPantallaLatam.webp')" }}>
+               <div className="container mx-auto flex flex-col items-center justify-center text-center min-h-screen">
+                    <div className="relative z-10 bg-white p-6 rounded-lg shadow-lg">
+                         <h1 className="text-4xl font-bold mb-4 text-black">
+                              Bienvenidos!
+                         </h1>
+                         <p className="text-lg text-gray-700">
+                              Productos Latam tiene una amplia trayectoria en la venta de
+                              productos para el hogar.
+                         </p>
+                         <Button onClick={handleClick}>Explorar Productos</Button>
+                    </div>
+               </div>
+          </div>
      );
 }
 
