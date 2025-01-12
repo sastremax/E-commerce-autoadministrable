@@ -1,7 +1,10 @@
 "use client";
+
+import { useState } from "react";
 import Button from "../components/button";
 
 function HomePage() {
+     cont 
      const handleClick = () => {
           alert("Bienvenidos a PRODUCTOS LATAM");
      };
