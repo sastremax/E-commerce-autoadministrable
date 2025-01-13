@@ -9,6 +9,9 @@ function HomePage() {
           console.log("Contador actual:", count);
           setCount(count + 1);
      }
+     const decrementarContador = () => {
+          setCount(count - 1);
+     }
 
      return (
           <div className="relative min-h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/fondoPantallaLatam.webp')" }}>
@@ -24,7 +27,11 @@ function HomePage() {
                          <p className="text-2xl font-bold mb-4 text-blue-500">
                               Contador: {count}
                          </p>
-                         <Button onClick={incrementarContador}>Incrementar</Button>
+                         <div className="flex justify-center space-x-4">
+                              <Button onClick={incrementarContador}>Incrementar</Button>
+                              <Button onClick={decrementarContador}>Decrementar</Button>
+                         </div>
+                         
                     </div>
                </div>
           </div>
