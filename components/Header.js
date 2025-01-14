@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@nextui-org/react";
 import Image from "next/image";
-import { Button, Navbar } from "@nextui-org/react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
      const [menuOpen, setMenuOpen] = useState(false);
+
      return (
           <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-4">
                <div className="container mx-auto flex justify-between items-center">
@@ -22,18 +23,23 @@ export default function Header() {
                               PRODUCTOS LATAM
                          </span>
                     </div>
-                    <nav className={`${menuOpen ? 'block' : 'hidden'} md:flex space-x-4`}>
+                    <nav
+                         className={`${menuOpen ? "block" : "hidden"} md:flex space-x-4`}
+                    >
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
                          </Link>
                          <Link href="/about" className="hover:text-gray-300">
-                              Nosotros
+                              Catálogo
                          </Link>
                          <Link href="/tienda" className="hover:text-gray-300">
-                              Tienda
+                              Producto
                          </Link>
                          <Link href="/contacto" className="hover:text-gray-300">
-                              Contacto
+                              Carrito
+                         </Link>
+                         <Link href="/admin" className="hover:text-gray-300">
+                              Admin
                          </Link>
                     </nav>
                     <Button auto color="primary" className="hidden md:block">
@@ -62,6 +68,6 @@ export default function Header() {
                          </svg>
                     </button>
                </div>
-          </header >
+          </header>
      );
 }

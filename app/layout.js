@@ -1,8 +1,7 @@
 import "./globals.css";
-import { metadata } from "./metadata";
-import ClientLayout from "../components/clientLayout.js";
+import ClientLayout from "../components/ClientLayout";
 import { Footer } from "../components/Footer";
-
+import { metadata } from "./metadata";
 
 function RootLayout({ children }) {
      return (
@@ -10,15 +9,18 @@ function RootLayout({ children }) {
                <head>
                     <title>{metadata.title}</title>
                     <meta name="description" content={metadata.description} />
+                    <meta
+                         name="viewport"
+                         content="width=device-width, initial-scale=1.0"
+                    />
                     <link rel="icon" href="/favicon.png" type="image/png" />
                </head>
                <body>
                     <ClientLayout>{children}</ClientLayout>
                     <Footer />
                </body>
-               
           </html>
      );
 }
 
-export default RootLayout
+export default RootLayout;
