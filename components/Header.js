@@ -29,13 +29,13 @@ export default function Header() {
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
                          </Link>
-                         <Link href="/about" className="hover:text-gray-300">
+                         <Link href="/catalogo" className="hover:text-gray-300">
                               Catálogo
                          </Link>
-                         <Link href="/tienda" className="hover:text-gray-300">
+                         <Link href="/producto" className="hover:text-gray-300">
                               Producto
                          </Link>
-                         <Link href="/contacto" className="hover:text-gray-300">
+                         <Link href="/carrito" className="hover:text-gray-300">
                               Carrito
                          </Link>
                          <Link href="/admin" className="hover:text-gray-300">
