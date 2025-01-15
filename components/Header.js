@@ -42,9 +42,11 @@ export default function Header() {
                               Admin
                          </Link>
                     </nav>
-                    <Button auto color="primary" className="hidden md:block">
-                         Iniciar Sesión
-                    </Button>
+                    <Link href="/iniciar-sesion" legacyBehavior>
+                         <Button auto color="primary" className="hidden md:block">
+                              Iniciar Sesión
+                         </Button>
+                    </Link>
                     <button
                          type="button"
                          className="block md:hidden text-white focus:outline-none"

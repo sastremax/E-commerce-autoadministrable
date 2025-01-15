@@ -1,13 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Button from "../components/Button"; 
-
 function HomePage() {
-     const [count, setCount] = useState(0);      
-     const incrementarContador = () => {
-          setCount(count + 1);
-     };
 
      return (
           <div
@@ -20,8 +13,6 @@ function HomePage() {
                          <p className="text-lg text-gray-700 mb-4">
                               Productos Latam tiene una amplia trayectoria en la venta de productos para el hogar.
                          </p>
-                         <p className="text-2xl font-bold mb-4 text-blue-500">Contador: {count}</p>
-                         <Button onClick={incrementarContador}>Incrementar</Button>
                     </div>
                </div>
           </div>
