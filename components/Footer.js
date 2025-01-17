@@ -1,8 +1,4 @@
-import {
-     EnvelopeIcon,
-     FaceSmileIcon,
-     PhoneIcon,
-} from "@heroicons/react/24/solid";
+import { Smile, Mail, Phone } from "lucide-react";
 
 export function Footer() {
      return (
@@ -17,21 +13,21 @@ export function Footer() {
                          title="Facebook"
                          aria-label="Visita nuestro Facebook"
                     >
-                         <FaceSmileIcon className="h-6 w-6 text-white hover:text-blue-400" />
+                         <Smile className="h-6 w-6 text-white hover:text-blue-400" />
                     </a>
                     <a
                          href="mailto:contacto@productoslatam.com"
                          title="Email"
                          aria-label="Envíanos un correo"
                     >
-                         <EnvelopeIcon className="h-6 w-6 text-white hover:text-blue-500" />
+                         <Mail className="h-6 w-6 text-white hover:text-blue-500" />
                     </a>
                     <a
                          href="tel:+1234567890"
                          title="Teléfono"
                          aria-label="Llámanos por teléfono"
                     >
-                         <PhoneIcon className="h-6 w-6 text-white hover:text-blue-600" />
+                         <Phone className="h-6 w-6 text-white hover:text-blue-600" />
                     </a>
                </div>
           </footer>

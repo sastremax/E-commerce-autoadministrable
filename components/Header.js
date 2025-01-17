@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ShoppingCart } from "lucide-react";
 
 export default function Header() {
      const [menuOpen, setMenuOpen] = useState(false);
@@ -29,14 +30,11 @@ export default function Header() {
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
                          </Link>
-                         <Link href="/catalogo" className="hover:text-gray-300">
-                              Catálogo
-                         </Link>
                          <Link href="/producto" className="hover:text-gray-300">
                               Producto
                          </Link>
                          <Link href="/carrito" className="hover:text-gray-300">
-                              Carrito
+                              <ShoppingCart className="h-6 w-6" />
                          </Link>
                          <Link href="/admin" className="hover:text-gray-300">
                               Admin

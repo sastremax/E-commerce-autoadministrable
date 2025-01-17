@@ -45,10 +45,10 @@ function ProductoPage() {
                                    Agregar al carrito
                               </button>
                               <Link
-                                   href="/catalogo"
+                                   href="/(home)/page.js"
                                    className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
                               >
-                                   Volver al catálogo
+                                   Volver al inicio
                               </Link>
                          </div>
                     </div>
