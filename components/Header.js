@@ -29,10 +29,7 @@ export default function Header() {
                     >
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
-                         </Link>
-                         <Link href="/producto" className="hover:text-gray-300">
-                              Producto
-                         </Link>
+                         </Link>                         
                          <Link href="/carrito" className="hover:text-gray-300">
                               <ShoppingCart className="h-6 w-6" />
                          </Link>
