@@ -102,7 +102,12 @@ function HomePage() {
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
                          {loading ? (
-                              <p>Cargando productos...</p>
+                              <div className="flex items-center justify-center space-x-2">
+                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
+                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
+                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
+                              </div>
+
                          ) : (
                               <ProductList productos={productos} />
                          )}
