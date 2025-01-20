@@ -1,7 +1,46 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function ProductoPage({ params}) {
+export async function generateMetadata({ params }) {
+    const { id } = params;
+
+    const producto = await fetch(`https://api.mercadolibre.com/items/${id}`).then(res => res.json());
+    if (!producto || producto.error) {
+        return {
+            title: "Producto no encontrado - LATAM PRODUCTS",
+            description: "El producto que buscas no existe o ya no está disponible.",
+            robots: "noindex, nofollow",
+        };
+    }
+
+    return {
+        title: `${producto.title} - LATAM PRODUCTS`,
+        authors: [{ name: "Maximiliano Sastre" }],
+        metadataBase: new URL("http://localhost:3000"),
+        description: producto.description || "Detalles de este producto único.",
+        keywords: [
+            producto.title,
+            "productos electrónicos",
+            "e-commerce",
+            "LATAM PRODUCTS",
+        ],
+        robots: "index, follow",
+        openGraph: {
+            title: `${producto.title} - LATAM PRODUCTS`,
+            description: producto.description || "Detalles de este producto único.",
+            images: [
+                {
+                    url: producto.thumbnail || "/images/default-product.webp",
+                    width: 800,
+                    height: 600,
+                    alt: producto.title,
+                },
+            ],
+        },
+    };
+}
+
+export default async function ProductoPage({ params }) {
 
     const { id } = params;
     console.log("Params:", params);
@@ -9,7 +48,7 @@ export default async function ProductoPage({ params}) {
     const resProducto = await fetch(`https://api.mercadolibre.com/items/${id}`);
     const producto = await resProducto.json();
     console.log("detalles", producto);
-    
+
     if (!producto || producto.error) {
         notFound();
     }
