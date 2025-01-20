@@ -10,7 +10,7 @@ function Header() {
      const [menuOpen, setMenuOpen] = useState(false);
 
      return (
-          <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-4">
+          <header className="bg-[var(--background)] text-black py-4 shadow-md">
                <div className="container mx-auto flex justify-between items-center">
                     <div className="flex items-center">
                          <Image

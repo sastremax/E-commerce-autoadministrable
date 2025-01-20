@@ -4,7 +4,7 @@ import Link from "next/link";
 function ProductLayout({ children }) {
     return (
         <div className="flex flex-col md:flex-row gap-8 p-6">
-            <aside className="min-w-[250px] bg-gray-100 p-4 rounded-lg shadow">
+            <aside className="min-w-[250px] bg-white p-4 rounded-lg shadow">
                 <PageTitle>Filtros</PageTitle>
                 <nav className="space-y-4">
                     <Link

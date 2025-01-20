@@ -39,7 +39,7 @@ function HomePage() {
 
      return (
           <div>
-               <div className="p-6 py-12 bg-blue-500 text-gray-50">
+               <div className="p-6 py-12 bg-white text-blue-500">
                     <div className="container mx-auto">
                          <div className="flex flex-col lg:flex-row items-center justify-between">
                               <h2 className="text-center text-6xl tracking-tighter font-bold">Hasta un

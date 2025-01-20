@@ -30,7 +30,7 @@ function CarritoPage() {
      return (
           <div className="min-h-screen bg-gray-100 p-6">
                <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
-                    <h1 className="text-2xl font-bold mb-4 text-gray-800">Carrito de Compras</h1>
+                    <h1 className="text-2xl font-bold mb-4 text-white">Carrito de Compras</h1>
                     <div className="space-y-4">
                          {/* Elemento del carrito */}
                          <div className="flex justify-between items-center border-b pb-4">
@@ -72,7 +72,7 @@ function CarritoPage() {
                     </div>
                     {/* Botones de acción */}
                     <div className="mt-6 flex space-x-4">
-                         <Link href="/catalogo">
+                         <Link href="/">
                               <div className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300">
                                    Seguir comprando
                               </div>
