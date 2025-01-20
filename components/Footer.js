@@ -1,6 +1,6 @@
 import { Smile, Mail, Phone } from "lucide-react";
 
-export function Footer() {
+function Footer() {
      return (
           <footer className="footer">
                <p>
@@ -33,3 +33,5 @@ export function Footer() {
           </footer>
      );
 }
+
+export default Footer;

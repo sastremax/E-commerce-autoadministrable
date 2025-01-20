@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
+import Button from "@/components/Button";
 
-export default function Header() {
+function Header() {
      const [menuOpen, setMenuOpen] = useState(false);
 
      return (
@@ -17,8 +17,8 @@ export default function Header() {
                               src="/images/logolatam.webp"
                               alt="Logo de LATAM PRODUCTS"
                               width={90}
-                              height={100}
-                              className="rounded-lg"
+                              height={100}                              
+                              className="rounded-lg"                              
                          />
                          <span className="ml-2 text-xl font-bold tracking-wide">
                               PRODUCTOS LATAM
@@ -29,7 +29,7 @@ export default function Header() {
                     >
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
-                         </Link>                         
+                         </Link>
                          <Link href="/carrito" className="hover:text-gray-300">
                               <ShoppingCart className="h-6 w-6" />
                          </Link>
@@ -37,8 +37,11 @@ export default function Header() {
                               Admin
                          </Link>
                     </nav>
-                    <Link href="/iniciar-sesion" legacyBehavior>
-                         <Button auto color="primary" className="hidden md:block">
+                    <Link href="/iniciar-sesion">
+                         <Button
+                              className="hidden md:block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                              type="button"
+                         >
                               Iniciar Sesión
                          </Button>
                     </Link>
@@ -68,3 +71,5 @@ export default function Header() {
           </header>
      );
 }
+
+export default Header;

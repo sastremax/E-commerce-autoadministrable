@@ -16,23 +16,7 @@ function CarritoPage() {
           }))
      );
 
-     const incrementarContador = (id) => {
-          setCarrito(
-               carrito.map((item) =>
-                    item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
-               )
-          );
-     };
-
-     const decrementarContador = (id) => {
-          setCarrito(
-               carrito.map((item) =>
-                    item.id === id && item.cantidad > 1
-                         ? { ...item, cantidad: item.cantidad - 1 }
-                         : item
-               )
-          );
-     };
+     
 
      const eliminarProducto = (id) => {
           setCarrito(carrito.filter((item) => item.id !== id));

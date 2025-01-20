@@ -60,45 +60,6 @@ function HomePage() {
                     />
                </div>
                <div className="flex bg-white text-black">
-                    <aside className="w-full p-6 sm:w-60 bg-gray-100">
-                         <nav className="space-y-8 text-sm">
-                              <div className="space-y-2">
-                                   <h2 className="text-sm font-semibold tracking-widest uppercase text-gray-700">
-                                        Categorías
-                                   </h2>
-                                   <div className="flex flex-col space-y-1">
-                                        <button
-                                             type="button"
-                                             onClick={() => fetchData("televisores")}
-                                             className="hover:text-blue-600"
-                                        >
-                                             Televisores
-                                        </button>
-                                        <button
-                                             type="button"
-                                             onClick={() => fetchData("laptops")}
-                                             className="hover:text-blue-600"
-                                        >
-                                             Laptops
-                                        </button>
-                                        <button
-                                             type="button"
-                                             onClick={() => fetchData("celulares")}
-                                             className="hover:text-blue-600"
-                                        >
-                                             Celulares
-                                        </button>
-                                        <button
-                                             type="button"
-                                             onClick={() => fetchData("accesorios")}
-                                             className="hover:text-blue-600"
-                                        >
-                                             Accesorios
-                                        </button>
-                                   </div>
-                              </div>
-                         </nav>
-                    </aside>
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
                          {loading ? (
