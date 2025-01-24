@@ -19,14 +19,14 @@ function ProductList({ productos }) {
                 >
                     <div className="h-full flex flex-col">
                         <img
-                            src={producto.imagen}
-                            alt={producto.nombre || "Producto sin nombre"}
+                            src={producto.imagen1}
+                            alt={producto.name || "Producto sin nombre"}
                             className="w-full h-48 object-contain rounded-lg mb-4"
                         />
-                        <h2 className="text-lg font-semibold mb-2">{producto.nombre}</h2>
-                        <p className="text-sm mb-4">{producto.descripcion}</p>
+                        <h2 className="text-lg font-semibold mb-2">{producto.name}</h2>
+                        <p className="text-sm mb-4">{producto.description}</p>
                         <div className="mt-auto">
-                            <span className="text-blue-600 font-bold">{producto.precio}</span>
+                            <span className="text-blue-600 font-bold">{producto.price.toLocaleString()}</span>
                             <p className="text-gray-700">Stock: {producto.stock}</p>
                         </div>
                     </div>

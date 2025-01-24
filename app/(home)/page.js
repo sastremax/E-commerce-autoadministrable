@@ -1,43 +1,35 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/utils/firebase";
 import ProductList from "@/components/ProductList";
 
 function HomePage() {
+
      const [productos, setProductos] = useState([]);
      const [loading, setLoading] = useState(true);
-     const searchParams = useSearchParams();
-     const category = searchParams.get("category") || "electronicos";
 
      useEffect(() => {
           const fetchData = async () => {
                setLoading(true);
-
                try {
-                    const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}&limit=50`);
-                    const result = await response.json();
-
-                    const productosTransformados = result.results.map((producto) => ({
-                         id: producto.id,
-                         nombre: producto.title,
-                         descripcion: producto.condition === "new" ? "Nuevo" : "Usado",
-                         imagen: producto.thumbnail,
-                         precio: `$${producto.price.toLocaleString()}`,
-                         stock: producto.available_quantity,
+                    const querySnapshot = await getDocs(collection(db, "productos"));
+                    const productosFirestore = querySnapshot.docs.map((doc) => ({
+                         id: doc.id,
+                         ...doc.data(),
                     }));
 
-                    setProductos(productosTransformados);
+                    setProductos(productosFirestore);
                } catch (error) {
-                    console.error("Error al obtener productos:", error);
-                    setProductos([]);
+                    console.error("Error al obtener productos de Firestore:", error);
                } finally {
                     setLoading(false);
                }
-
           };
+
           fetchData();
-     }, [category]);
+     }, []);
 
      return (
           <div>
@@ -61,7 +53,7 @@ function HomePage() {
                          className="w-full h-auto object-cover shadow-lg"
                     />
                </div>
-               <div className="flex bg-white text-black">                    
+               <div className="flex bg-white text-black">
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
                          {loading ? (
@@ -70,7 +62,6 @@ function HomePage() {
                                    <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
                                    <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
                               </div>
-
                          ) : (
                               <ProductList productos={productos} />
                          )}

@@ -5,7 +5,8 @@
       "@/components/*": ["components/*"],
       "@/actions/*": ["app/actions/*"],
       "@/providers/*": ["app/providers/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/assets/*": ["assets/*"]
     }
   }
 }
