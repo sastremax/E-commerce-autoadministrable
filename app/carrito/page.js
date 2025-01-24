@@ -2,24 +2,27 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import productos from "../../data/mockData";
 
 function CarritoPage() {
 
-     const [carrito, setCarrito] = useState(
-          productos.slice(0, 3).map((producto) => ({
-               id: producto.id,
-               nombre: producto.nombre,
-               precio: 0,
-               cantidad: 1,
-               imagen: producto.imagen,
-          }))
-     );
-
-     
+     const [carrito, setCarrito] = useState([]);     
 
      const eliminarProducto = (id) => {
           setCarrito(carrito.filter((item) => item.id !== id));
+     };
+
+     const agregarAlCarrito = (producto) => {
+          setCarrito((prevCarrito) => {
+               const productoExistente = prevCarrito.find((item) => item.id === producto.id);
+               if (productoExistente) {
+                    return prevCarrito.map((item) =>
+                         item.id === producto.id
+                              ? { ...item, cantidad: item.cantidad + 1 }
+                              : item
+                    );
+               }
+               return [...prevCarrito, { ...producto, cantidad: 1 }];
+          });
      };
 
      const subtotal = carrito.reduce(
@@ -31,8 +34,7 @@ function CarritoPage() {
           <div className="min-h-screen bg-gray-100 p-6">
                <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
                     <h1 className="text-2xl font-bold mb-4 text-white">Carrito de Compras</h1>
-                    <div className="space-y-4">
-                         {/* Elemento del carrito */}
+                    <div className="space-y-4">                        
                          <div className="flex justify-between items-center border-b pb-4">
                               <div>
                                    <h2 className="font-semibold text-gray-800">Televisor 4K</h2>
@@ -55,7 +57,6 @@ function CarritoPage() {
                               <div className="text-blue-600 font-bold">$300.00</div>
                          </div>
                     </div>
-                    {/* Resumen del carrito */}
                     <div className="mt-6 border-t pt-4">
                          <div className="flex justify-between text-gray-800">
                               <span>Subtotal</span>
@@ -70,7 +71,6 @@ function CarritoPage() {
                               <span className="font-bold text-xl text-blue-600">$1800.00</span>
                          </div>
                     </div>
-                    {/* Botones de acción */}
                     <div className="mt-6 flex space-x-4">
                          <Link href="/">
                               <div className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300">

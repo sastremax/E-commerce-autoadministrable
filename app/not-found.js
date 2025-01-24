@@ -6,7 +6,7 @@ const NotFoundPage = () => {
             <img 
                 src="/images/not-found.webp"
                 alt="Página no encontrada"
-                style={{ maxWidth: "400px", height: "auto", margin: "0 auto" }}
+                style={{ maxWidth: "600px", height: "auto", margin: "0 auto" }}
             />
             <Link href="/" style={{ color: "blue", textDecoration: "underline" }}>
                 Volver al home

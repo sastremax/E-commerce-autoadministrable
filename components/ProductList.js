@@ -13,7 +13,7 @@ function ProductList({ productos }) {
             {productos.map((producto) => (
                 <Link
                     key={producto.id}
-                    href={`/producto/${producto.id}`}
+                    href={`/products/details/${producto.id}`}
                     className="p-4 border rounded-lg shadow hover:shadow-lg hover:scale-105 bg-white cursor-pointer transition-transform duration-200"
                     aria-label={`Ver detalles del producto: ${producto.nombre}`}
                 >

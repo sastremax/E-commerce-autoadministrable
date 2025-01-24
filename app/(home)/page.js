@@ -1,18 +1,21 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import ProductList from "@/components/ProductList";
 
 function HomePage() {
      const [productos, setProductos] = useState([]);
      const [loading, setLoading] = useState(true);
+     const searchParams = useSearchParams();
+     const category = searchParams.get("category") || "electronicos";
 
      useEffect(() => {
-          const fetchData = async (categoria = "electronicos") => {
+          const fetchData = async () => {
                setLoading(true);
 
                try {
-                    const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${categoria}&limit=50`);
+                    const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${category}&limit=50`);
                     const result = await response.json();
 
                     const productosTransformados = result.results.map((producto) => ({
@@ -28,14 +31,13 @@ function HomePage() {
                } catch (error) {
                     console.error("Error al obtener productos:", error);
                     setProductos([]);
-                    setLoading(false);
                } finally {
                     setLoading(false);
                }
 
           };
           fetchData();
-     }, []);
+     }, [category]);
 
      return (
           <div>
@@ -59,7 +61,7 @@ function HomePage() {
                          className="w-full h-auto object-cover shadow-lg"
                     />
                </div>
-               <div className="flex bg-white text-black">
+               <div className="flex bg-white text-black">                    
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
                          {loading ? (
