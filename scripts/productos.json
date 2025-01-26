@@ -14,9 +14,9 @@
     "name": "Pila Aa Energizer Max E91 Cilíndrica - Pack De 8 Unidades",
     "description": "Nuevo",
     "features": [],
-    "price": 3500,
-    "image1": "http://http2.mlstatic.com/D_694631-MLA48691260788_122021-I.jpg",
-    "stock": 10,
+    "price": 4329,
+    "image1": "http://http2.mlstatic.com/D_766690-MLA46301154156_062021-I.jpg",
+    "stock": 500,
     "category": "Baterías"
   },
   {
@@ -24,9 +24,9 @@
     "name": "20 Pilas Aa Energizer Max E91 Alcalina",
     "description": "Nuevo",
     "features": [],
-    "price": 14500,
-    "image1": "http://http2.mlstatic.com/D_123456-MLA74192321567_012024-I.jpg",
-    "stock": 5,
+    "price": 12273.05,
+    "image1": "http://http2.mlstatic.com/D_983821-MLU72647867249_112023-I.jpg",
+    "stock": 100,
     "category": "Baterías"
   },
   {
@@ -34,39 +34,9 @@
     "name": "Smart Tv Tcl L43d5400 43'' Full Hd Led",
     "description": "Nuevo",
     "features": [],
-    "price": 125000,
-    "image1": "http://http2.mlstatic.com/D_789654-MLA78965412365_122023-I.jpg",
-    "stock": 3,
-    "category": "Televisores"
-  },
-  {
-    "id": "MLA1987374428",
-    "name": "Smart Tv Quint 43 Pulgadas Qt3-43gtv2024 Full Hd Google Tv",
-    "description": "Nuevo",
-    "features": [],
-    "price": 135000,
-    "image1": "http://http2.mlstatic.com/D_654987-MLA65498712547_022023-I.jpg",
-    "stock": 2,
-    "category": "Televisores"
-  },
-  {
-    "id": "MLA1445853909",
-    "name": "Smart Tv Sansei Led Full Hd 42 Pulgadas Android Tv",
-    "description": "Nuevo",
-    "features": [],
-    "price": 110000,
-    "image1": "http://http2.mlstatic.com/D_852963-MLA85296314785_122023-I.jpg",
-    "stock": 4,
-    "category": "Televisores"
-  },
-  {
-    "id": "MLA1469113111",
-    "name": "Smart Tv Noblex Dv32x5050 32'' Hd Led Vidaa",
-    "description": "Nuevo",
-    "features": [],
-    "price": 89000,
-    "image1": "http://http2.mlstatic.com/D_987654-MLA98765413456_122023-I.jpg",
-    "stock": 6,
+    "price": 399999,
+    "image1": "http://http2.mlstatic.com/D_999083-MLU76641166768_062024-I.jpg",
+    "stock": 500,
     "category": "Televisores"
   },
   {
@@ -74,39 +44,79 @@
     "name": "Auriculares Bluetooth In-ear F9-5 Negro Inalámbricos",
     "description": "Nuevo",
     "features": [],
-    "price": 3500,
-    "image1": "http://http2.mlstatic.com/D_159753-MLA15975315975_122023-I.jpg",
-    "stock": 15,
+    "price": 5349,
+    "image1": "http://http2.mlstatic.com/D_606799-MLA53246315039_012023-I.jpg",
+    "stock": 200,
     "category": "Auriculares"
+  },
+  {
+    "id": "MLA1137715997",
+    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
+    "description": "Nuevo",
+    "features": [],
+    "price": 74099.43,
+    "image1": "http://http2.mlstatic.com/D_816810-MLU72700970573_112023-I.jpg",
+    "stock": 250,
+    "category": "Parlantes"
   },
   {
     "id": "MLA1915925896",
     "name": "Auriculares Bluetooth Lenovo Sports Racing Xt80, Color Negro Y Azul Claro",
     "description": "Nuevo",
     "features": [],
-    "price": 4200,
-    "image1": "http://http2.mlstatic.com/D_357951-MLA35795135795_122023-I.jpg",
-    "stock": 10,
+    "price": 30029,
+    "image1": "http://http2.mlstatic.com/D_945691-MLU76682031827_052024-I.jpg",
+    "stock": 250,
     "category": "Auriculares"
+  },
+  {
+    "id": "MLA1384557717",
+    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
+    "description": "Nuevo",
+    "features": [],
+    "price": 15505.2,
+    "image1": "http://http2.mlstatic.com/D_735328-MLU72756733172_112023-I.jpg",
+    "stock": 250,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1464115167",
+    "name": "Roku Express 3960 Estándar Hd Con Control Remoto Negro 512 Mb",
+    "description": "Nuevo",
+    "features": [],
+    "price": 46543,
+    "image1": "http://http2.mlstatic.com/D_769811-MLU74194881535_012024-I.jpg",
+    "stock": 100,
+    "category": "Streaming y Multimedia"
   },
   {
     "id": "MLA1449745363",
     "name": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Bluetooth 5.4 Color Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 2500,
-    "image1": "http://http2.mlstatic.com/D_147852-MLA14785214785_122023-I.jpg",
-    "stock": 20,
+    "price": 22889,
+    "image1": "http://http2.mlstatic.com/D_833941-MLU78764933573_082024-I.jpg",
+    "stock": 500,
     "category": "Auriculares"
+  },
+  {
+    "id": "MLA1987374428",
+    "name": "Smart Tv Quint 43 Pulgadas Qt3-43gtv2024 Full Hd Google Tv",
+    "description": "Nuevo",
+    "features": [],
+    "price": 352091,
+    "image1": "http://http2.mlstatic.com/D_894658-MLA81403950158_122024-I.jpg",
+    "stock": 1,
+    "category": "Televisores"
   },
   {
     "id": "MLA1453361871",
     "name": "Auriculares Inalámbricos Lenovo Livepod Lp75 Bluetooth Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 4300,
-    "image1": "http://http2.mlstatic.com/D_741852-MLA74185296385_122023-I.jpg",
-    "stock": 10,
+    "price": 30375,
+    "image1": "http://http2.mlstatic.com/D_750131-MLU77424111692_072024-I.jpg",
+    "stock": 50,
     "category": "Auriculares"
   },
   {
