@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/utils/config";
+import { db } from "../../utils/config";
 import ProductList from "@/components/ProductList";
 
 function HomePage() {

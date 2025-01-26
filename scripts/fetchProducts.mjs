@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { writeFileSync } from "fs";
+import { writeFileSync } from "node:fs";
 
 async function fetchProducts() {
     try {

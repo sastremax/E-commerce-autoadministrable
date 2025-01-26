@@ -8,9 +8,16 @@ function ProductList({ productos }) {
         return <p className="text-center text-gray-400">No hay productos</p>;
     }
 
+    const productosUnicos = productos.reduce((acc, producto) => {
+        if (!acc.find((p) => p.id === producto.id)) {
+            acc.push(producto);
+        }
+        return acc;
+    }, []);
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {productos.map((producto) => (
+            {productosUnicos.map((producto) => (
                 <Link
                     key={producto.id}
                     href={`/products/details/${producto.id}`}
@@ -20,10 +27,11 @@ function ProductList({ productos }) {
                     <div className="h-full flex flex-col">
                         <div className="relative w-full h-48 mb-4">
                             <Image
-                                src={producto.image1} // Aquí usamos el campo "image1"
+                                src={producto.image1}
                                 alt={producto.name || "Producto sin nombre"}
-                                layout="fill" // Hace que la imagen llene el contenedor
-                                objectFit="contain" // Ajusta la imagen sin recortarla
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                style={{ objectFit: "contain" }}
                                 className="rounded-lg"
                             />
                         </div>

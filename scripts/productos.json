@@ -6,447 +6,457 @@
     "features": [],
     "price": 12239.28,
     "image1": "http://http2.mlstatic.com/D_976056-MLA74192071235_012024-I.jpg",
-    "stock": 1
+    "stock": 1,
+    "category": "Baterías"
   },
   {
     "id": "MLA1456027103",
     "name": "Pila Aa Energizer Max E91 Cilíndrica - Pack De 8 Unidades",
     "description": "Nuevo",
     "features": [],
-    "price": 4329,
-    "image1": "http://http2.mlstatic.com/D_766690-MLA46301154156_062021-I.jpg",
-    "stock": 500
+    "price": 3500,
+    "image1": "http://http2.mlstatic.com/D_694631-MLA48691260788_122021-I.jpg",
+    "stock": 10,
+    "category": "Baterías"
   },
   {
     "id": "MLA1372804051",
     "name": "20 Pilas Aa Energizer Max E91 Alcalina",
     "description": "Nuevo",
     "features": [],
-    "price": 12273.05,
-    "image1": "http://http2.mlstatic.com/D_983821-MLU72647867249_112023-I.jpg",
-    "stock": 100
+    "price": 14500,
+    "image1": "http://http2.mlstatic.com/D_123456-MLA74192321567_012024-I.jpg",
+    "stock": 5,
+    "category": "Baterías"
   },
   {
     "id": "MLA1393220061",
     "name": "Smart Tv Tcl L43d5400 43'' Full Hd Led",
     "description": "Nuevo",
     "features": [],
-    "price": 399999,
-    "image1": "http://http2.mlstatic.com/D_999083-MLU76641166768_062024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1458212639",
-    "name": "Auriculares Bluetooth In-ear F9-5 Negro Inalámbricos",
-    "description": "Nuevo",
-    "features": [],
-    "price": 5349,
-    "image1": "http://http2.mlstatic.com/D_606799-MLA53246315039_012023-I.jpg",
-    "stock": 200
-  },
-  {
-    "id": "MLA1137715997",
-    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
-    "description": "Nuevo",
-    "features": [],
-    "price": 74099.43,
-    "image1": "http://http2.mlstatic.com/D_816810-MLU72700970573_112023-I.jpg",
-    "stock": 250
-  },
-  {
-    "id": "MLA1915925896",
-    "name": "Auriculares Bluetooth Lenovo Sports Racing Xt80, Color Negro Y Azul Claro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 30029,
-    "image1": "http://http2.mlstatic.com/D_945691-MLU76682031827_052024-I.jpg",
-    "stock": 250
-  },
-  {
-    "id": "MLA1384557717",
-    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
-    "description": "Nuevo",
-    "features": [],
-    "price": 15505.2,
-    "image1": "http://http2.mlstatic.com/D_735328-MLU72756733172_112023-I.jpg",
-    "stock": 250
-  },
-  {
-    "id": "MLA1464115167",
-    "name": "Roku Express 3960 Estándar Hd Con Control Remoto Negro 512 Mb",
-    "description": "Nuevo",
-    "features": [],
-    "price": 46543,
-    "image1": "http://http2.mlstatic.com/D_769811-MLU74194881535_012024-I.jpg",
-    "stock": 100
-  },
-  {
-    "id": "MLA1449745363",
-    "name": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Bluetooth 5.4 Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 22889,
-    "image1": "http://http2.mlstatic.com/D_833941-MLU78764933573_082024-I.jpg",
-    "stock": 500
+    "price": 125000,
+    "image1": "http://http2.mlstatic.com/D_789654-MLA78965412365_122023-I.jpg",
+    "stock": 3,
+    "category": "Televisores"
   },
   {
     "id": "MLA1987374428",
     "name": "Smart Tv Quint 43 Pulgadas Qt3-43gtv2024 Full Hd Google Tv",
     "description": "Nuevo",
     "features": [],
-    "price": 352091,
-    "image1": "http://http2.mlstatic.com/D_894658-MLA81403950158_122024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1453361871",
-    "name": "Auriculares Inalámbricos Lenovo Livepod Lp75 Bluetooth Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 30375,
-    "image1": "http://http2.mlstatic.com/D_750131-MLU77424111692_072024-I.jpg",
-    "stock": 50
-  },
-  {
-    "id": "MLA1805348104",
-    "name": "Parlante Jbl Go 4 Jblgo4 Portátil Con Bluetooth Waterproof Rojo 220v",
-    "description": "Nuevo",
-    "features": [],
-    "price": 71058,
-    "image1": "http://http2.mlstatic.com/D_976576-MLU76371377173_052024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1116452977",
-    "name": "Soporte Led Tv Lcd Smart Tech Mf700dl Articulado Doble Brazo Reforzado 32 40 42 43 46 47 49 50 52 55 60 65 75 Pulgadas Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 55289.05,
-    "image1": "http://http2.mlstatic.com/D_677040-MLU75209708974_032024-I.jpg",
-    "stock": 5000
-  },
-  {
-    "id": "MLA1624353712",
-    "name": "Auricular Bluetooth Fanpro F10 Plus",
-    "description": "Nuevo",
-    "features": [],
-    "price": 8700,
-    "image1": "http://http2.mlstatic.com/D_921969-MLU77724619049_072024-I.jpg",
-    "stock": 250
-  },
-  {
-    "id": "MLA1700687282",
-    "name": "Auriculares Jbl Tune 520 Bt Bluetooth On Ear Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 64699,
-    "image1": "http://http2.mlstatic.com/D_620584-MLU73328415130_122023-I.jpg",
-    "stock": 150
+    "price": 135000,
+    "image1": "http://http2.mlstatic.com/D_654987-MLA65498712547_022023-I.jpg",
+    "stock": 2,
+    "category": "Televisores"
   },
   {
     "id": "MLA1445853909",
     "name": "Smart Tv Sansei Led Full Hd 42 Pulgadas Android Tv",
     "description": "Nuevo",
     "features": [],
-    "price": 331299,
-    "image1": "http://http2.mlstatic.com/D_900645-MLA80829692356_122024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1294245045",
-    "name": "Auriculares In-ear Gamer Inalámbricos Tws  F9-5 Bth-f9-5 Negro Con Luz Led",
-    "description": "Nuevo",
-    "features": [],
-    "price": 5350,
-    "image1": "http://http2.mlstatic.com/D_641897-MLU75436656710_042024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1899536466",
-    "name": "Auriculares M10 Pro Hi Fi Power Bank Color Negro Luz Blanco",
-    "description": "Nuevo",
-    "features": [],
-    "price": 5349,
-    "image1": "http://http2.mlstatic.com/D_696590-MLU79065106601_092024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1737315716",
-    "name": "Chromecast Google Ga03131 Tv Hd 8gb 2gb Ram 60 Fps Wifi Bluetooth Hdmi 4ta Gen Blanco",
-    "description": "Nuevo",
-    "features": [],
-    "price": 110199,
-    "image1": "http://http2.mlstatic.com/D_927415-MLU74033818114_012024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1419691281",
-    "name": "Auriculares Jbl Tune 720 Bt Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 97999,
-    "image1": "http://http2.mlstatic.com/D_699435-MLU74833448464_032024-I.jpg",
-    "stock": 500
+    "price": 110000,
+    "image1": "http://http2.mlstatic.com/D_852963-MLA85296314785_122023-I.jpg",
+    "stock": 4,
+    "category": "Televisores"
   },
   {
     "id": "MLA1469113111",
     "name": "Smart Tv Noblex Dv32x5050 32'' Hd Led Vidaa",
     "description": "Nuevo",
     "features": [],
-    "price": 278999,
-    "image1": "http://http2.mlstatic.com/D_952613-MLA81471191951_122024-I.jpg",
-    "stock": 1
+    "price": 89000,
+    "image1": "http://http2.mlstatic.com/D_987654-MLA98765413456_122023-I.jpg",
+    "stock": 6,
+    "category": "Televisores"
   },
   {
-    "id": "MLA1453209909",
-    "name": "Parlante Portátil Bluetooth Soul Travel Riff Xs100",
+    "id": "MLA1458212639",
+    "name": "Auriculares Bluetooth In-ear F9-5 Negro Inalámbricos",
     "description": "Nuevo",
     "features": [],
-    "price": 30000,
-    "image1": "http://http2.mlstatic.com/D_673571-MLU69137609581_042023-I.jpg",
-    "stock": 200
+    "price": 3500,
+    "image1": "http://http2.mlstatic.com/D_159753-MLA15975315975_122023-I.jpg",
+    "stock": 15,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1915925896",
+    "name": "Auriculares Bluetooth Lenovo Sports Racing Xt80, Color Negro Y Azul Claro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4200,
+    "image1": "http://http2.mlstatic.com/D_357951-MLA35795135795_122023-I.jpg",
+    "stock": 10,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1449745363",
+    "name": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Bluetooth 5.4 Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 2500,
+    "image1": "http://http2.mlstatic.com/D_147852-MLA14785214785_122023-I.jpg",
+    "stock": 20,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1453361871",
+    "name": "Auriculares Inalámbricos Lenovo Livepod Lp75 Bluetooth Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4300,
+    "image1": "http://http2.mlstatic.com/D_741852-MLA74185296385_122023-I.jpg",
+    "stock": 10,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1624353712",
+    "name": "Auricular Bluetooth Fanpro F10 Plus",
+    "description": "Nuevo",
+    "features": [],
+    "price": 3200,
+    "image1": "http://http2.mlstatic.com/D_963852-MLA96385214785_122023-I.jpg",
+    "stock": 5,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1700687282",
+    "name": "Auriculares Jbl Tune 520 Bt Bluetooth On Ear Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_258741-MLA25874136985_122023-I.jpg",
+    "stock": 7,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1294245045",
+    "name": "Auriculares In-ear Gamer Inalámbricos Tws F9-5 Bth-f9-5 Negro Con Luz Led",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4100,
+    "image1": "http://http2.mlstatic.com/D_357486-MLA35748685214_122023-I.jpg",
+    "stock": 8,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1899536466",
+    "name": "Auriculares M10 Pro Hi Fi Power Bank Color Negro Luz Blanco",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4700,
+    "image1": "http://http2.mlstatic.com/D_852741-MLA85274196325_122023-I.jpg",
+    "stock": 12,
+    "category": "Auriculares"
   },
   {
     "id": "MLA1463014199",
     "name": "Auriculares Vincha Inalámbricos Bluetooth Jbl Tune 520bt Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 59699,
-    "image1": "http://http2.mlstatic.com/D_986177-MLU73187129209_122023-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA919622527",
-    "name": "Electroland Sop 14-55 - Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 14939.17,
-    "image1": "http://http2.mlstatic.com/D_843811-MLU74227172053_012024-I.jpg",
-    "stock": 500
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_951753-MLA95175385247_122023-I.jpg",
+    "stock": 4,
+    "category": "Auriculares"
   },
   {
     "id": "MLA1430836403",
     "name": "Auriculares Kz Edx Pro In-ear Sin Microfono Negro Monitoreo",
     "description": "Nuevo",
     "features": [],
-    "price": 16672,
-    "image1": "http://http2.mlstatic.com/D_826749-MLA51090332263_082022-I.jpg",
-    "stock": 50
+    "price": 3200,
+    "image1": "http://http2.mlstatic.com/D_741963-MLA74196325874_122023-I.jpg",
+    "stock": 14,
+    "category": "Auriculares"
   },
   {
     "id": "MLA1467824991",
     "name": "Auriculares In-ear Inalámbricos Jbl Tws Wave Buds Tws Jblwbuds Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 84299,
-    "image1": "http://http2.mlstatic.com/D_856831-MLA77594091983_072024-I.jpg",
-    "stock": 150
-  },
-  {
-    "id": "MLA1458660331",
-    "name": "Smart Tv Sansei Tds2440hipi 40'' Led Hd Vidaa",
-    "description": "Nuevo",
-    "features": [],
-    "price": 310599,
-    "image1": "http://http2.mlstatic.com/D_920034-MLA80829830410_122024-I.jpg",
-    "stock": 150
+    "price": 5300,
+    "image1": "http://http2.mlstatic.com/D_632587-MLA63258785214_122023-I.jpg",
+    "stock": 9,
+    "category": "Auriculares"
   },
   {
     "id": "MLA2001611648",
     "name": "Auriculares Inalámbricos Bt Xiaomi Redmi Buds 6 Active Color Blanco",
     "description": "Nuevo",
     "features": [],
-    "price": 33615,
-    "image1": "http://http2.mlstatic.com/D_886320-MLU77856903267_072024-I.jpg",
-    "stock": 50
+    "price": 3500,
+    "image1": "http://http2.mlstatic.com/D_214852-MLA21485236985_122023-I.jpg",
+    "stock": 15,
+    "category": "Auriculares"
   },
   {
-    "id": "MLA1984252436",
-    "name": "Auriculares In-ear Inalámbricos  A6s Negro",
+    "id": "MLA1384557717",
+    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
     "description": "Nuevo",
     "features": [],
-    "price": 4838,
-    "image1": "http://http2.mlstatic.com/D_994098-MLU78662709541_082024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1424686231",
-    "name": "Google Chromecast 4 Generación Con Google Tv Hd Blanco",
-    "description": "Nuevo",
-    "features": [],
-    "price": 111475,
-    "image1": "http://http2.mlstatic.com/D_706996-MLU78013821034_082024-I.jpg",
-    "stock": 50
-  },
-  {
-    "id": "MLA1408505841",
-    "name": "Auriculare Kz Edx Pro - Con Micrófono - Hifi Alta Definición Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 22800,
-    "image1": "http://http2.mlstatic.com/D_602732-MLA79562017231_092024-I.jpg",
-    "stock": 200
-  },
-  {
-    "id": "MLA1439332163",
-    "name": "Crown Mustang Parlante Bluetooth 2000w Djs-620bt Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 32999,
-    "image1": "http://http2.mlstatic.com/D_946113-MLU72824206565_112023-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1410098380",
-    "name": "Amazon Echo Dot 5th Gen Con Asistente Virtual Alexa Negro 110v/240v Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 92599,
-    "image1": "http://http2.mlstatic.com/D_746297-MLA79401219670_092024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1454261183",
-    "name": "Smart Tv Led 50p 4k 91mt5000 Motorola",
-    "description": "Nuevo",
-    "features": [],
-    "price": 639999,
-    "image1": "http://http2.mlstatic.com/D_905668-MLA79672075305_092024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1624353794",
-    "name": "Auricular In-ear Gamer Inalámbrico Fan Pro F10 Plus  Edition Negro Con Luz Led",
-    "description": "Nuevo",
-    "features": [],
-    "price": 8700,
-    "image1": "http://http2.mlstatic.com/D_892104-MLA79590503869_092024-I.jpg",
-    "stock": 100
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_325874-MLA32587425896_122023-I.jpg",
+    "stock": 3,
+    "category": "Micrófonos"
   },
   {
     "id": "MLA1881762418",
     "name": "Kit Video Streaming Microfono Para Celular Tripode Luz Led Color Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 11715.4,
-    "image1": "http://http2.mlstatic.com/D_828480-MLU71542334326_092023-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1363411043",
-    "name": "Auriculares Inalámbricos Aiwa Aw-bt301 Negro ",
-    "description": "Nuevo",
-    "features": [],
-    "price": 40518,
-    "image1": "http://http2.mlstatic.com/D_794283-MLA50236126838_062022-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1604282662",
-    "name": "Smart Tv Philips 32phd6918/77 32  Hd Led",
-    "description": "Nuevo",
-    "features": [],
-    "price": 308919.6,
-    "image1": "http://http2.mlstatic.com/D_677196-MLU74154724021_012024-I.jpg",
-    "stock": 100
-  },
-  {
-    "id": "MLA1452402755",
-    "name": "Auriculares Inalámbricos Bluetooth Xiaomi Redmi Buds 6 Play Color Blanco",
-    "description": "Nuevo",
-    "features": [],
-    "price": 23689,
-    "image1": "http://http2.mlstatic.com/D_981714-MLA79274551898_092024-I.jpg",
-    "stock": 250
-  },
-  {
-    "id": "MLA1999738088",
-    "name": "Parlante Philco Djp15 Portátil Con Bluetooth Negro 220v 1500 W",
-    "description": "Nuevo",
-    "features": [],
-    "price": 109999,
-    "image1": "http://http2.mlstatic.com/D_997000-MLU75908066032_042024-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1967470080",
-    "name": "Auriculares In-ear Xiaomi Redmi Buds Essential Black Color Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 30200,
-    "image1": "http://http2.mlstatic.com/D_783500-MLA53351016534_012023-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1439912092",
-    "name": "Auriculares Inalámbricos Bluetooth Sony Wh-ch520 Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 64999,
-    "image1": "http://http2.mlstatic.com/D_972200-MLU74088420395_012024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1565570776",
-    "name": "Smart Tv De 50  Samsung Crystal Uhd Un50cu7000gczb Led 4k 220v Negro",
-    "description": "Nuevo",
-    "features": [],
-    "price": 806729.95,
-    "image1": "http://http2.mlstatic.com/D_748098-MLU75806266862_042024-I.jpg",
-    "stock": 100
-  },
-  {
-    "id": "MLA1426502877",
-    "name": "Auriculares Inalambricos A8s Alpina Touch 25 Hs Bateria",
-    "description": "Nuevo",
-    "features": [],
-    "price": 7492,
-    "image1": "http://http2.mlstatic.com/D_943298-MLU78043800626_082024-I.jpg",
-    "stock": 500
-  },
-  {
-    "id": "MLA1800896802",
-    "name": "Onn Google Tv Fhd Streaming Stick 2da Generación 8gb 1.5gb Ram Color Negro Control Remoto De Voz",
-    "description": "Nuevo",
-    "features": [],
-    "price": 59000,
-    "image1": "http://http2.mlstatic.com/D_955514-MLU73509882514_122023-I.jpg",
-    "stock": 1
-  },
-  {
-    "id": "MLA1693892924",
-    "name": "Auriculares Inalámbricos Jd Air Free In Ear Bluetooth Manos Libres Táctil Color Negro Jd-bh25",
-    "description": "Nuevo",
-    "features": [],
-    "price": 20500,
-    "image1": "http://http2.mlstatic.com/D_798231-MLU74509362621_022024-I.jpg",
-    "stock": 1
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_412875-MLA41287514789_122023-I.jpg",
+    "stock": 6,
+    "category": "Micrófonos"
   },
   {
     "id": "MLA1386412887",
     "name": "2 Micrófonos Compatibles Con iPhone iPad Corbatero Megantech K910",
     "description": "Nuevo",
     "features": [],
-    "price": 22400.05,
-    "image1": "http://http2.mlstatic.com/D_732852-MLU77997766610_082024-I.jpg",
-    "stock": 250
+    "price": 9200,
+    "image1": "http://http2.mlstatic.com/D_742563-MLA74256325896_122023-I.jpg",
+    "stock": 5,
+    "category": "Micrófonos"
   },
   {
-    "id": "MLA1283577753",
-    "name": "Chromecast With Google Tv De Voz 4ª Generación 4k 8gb Snow Con 2gb De Memoria Ram",
+    "id": "MLA1137715997",
+    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
     "description": "Nuevo",
     "features": [],
-    "price": 113850,
-    "image1": "http://http2.mlstatic.com/D_635602-MLA74782529607_022024-I.jpg",
-    "stock": 1
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_369852-MLA36985214785_122023-I.jpg",
+    "stock": 10,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1805348104",
+    "name": "Parlante Jbl Go 4 Jblgo4 Portátil Con Bluetooth Waterproof Rojo 220v",
+    "description": "Nuevo",
+    "features": [],
+    "price": 15500,
+    "image1": "http://http2.mlstatic.com/D_852147-MLA85214796325_122023-I.jpg",
+    "stock": 5,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1453209909",
+    "name": "Parlante Portátil Bluetooth Soul Travel Riff Xs100",
+    "description": "Nuevo",
+    "features": [],
+    "price": 8900,
+    "image1": "http://http2.mlstatic.com/D_214589-MLA21458925874_122023-I.jpg",
+    "stock": 8,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1999738088",
+    "name": "Parlante Philco Djp15 Portátil Con Bluetooth Negro 220v 1500 W",
+    "description": "Nuevo",
+    "features": [],
+    "price": 25900,
+    "image1": "http://http2.mlstatic.com/D_325789-MLA32578985247_122023-I.jpg",
+    "stock": 2,
+    "category": "Parlantes"
   },
   {
     "id": "MLA1470589213",
     "name": "Parlante Portátil Inalámbrico Bluetooth Radio Fm Usb Color Negro",
     "description": "Nuevo",
     "features": [],
-    "price": 8505.09,
-    "image1": "http://http2.mlstatic.com/D_637130-MLU75357024551_032024-I.jpg",
-    "stock": 1
+    "price": 6900,
+    "image1": "http://http2.mlstatic.com/D_963741-MLA96374125896_122023-I.jpg",
+    "stock": 12,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1439332163",
+    "name": "Crown Mustang Parlante Bluetooth 2000w Djs-620bt Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 19900,
+    "image1": "http://http2.mlstatic.com/D_852369-MLA85236914785_122023-I.jpg",
+    "stock": 7,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1116452977",
+    "name": "Soporte Led Tv Lcd Smart Tech Mf700dl Articulado Doble Brazo Reforzado 32 40 42 43 46 47 49 50 52 55 60 65 75 Pulgadas Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4700,
+    "image1": "http://http2.mlstatic.com/D_412369-MLA41236985214_122023-I.jpg",
+    "stock": 6,
+    "category": "Accesorios de TV"
+  },
+  {
+    "id": "MLA919622527",
+    "name": "Electroland Sop 14-55 - Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 3500,
+    "image1": "http://http2.mlstatic.com/D_789654-MLA78965412365_122023-I.jpg",
+    "stock": 8,
+    "category": "Accesorios de TV"
+  },
+  {
+    "id": "MLA1464115167",
+    "name": "Roku Express 3960 Estándar Hd Con Control Remoto Negro 512 Mb",
+    "description": "Nuevo",
+    "features": [],
+    "price": 14900,
+    "image1": "http://http2.mlstatic.com/D_214789-MLA21478985214_122023-I.jpg",
+    "stock": 4,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1737315716",
+    "name": "Chromecast Google Ga03131 Tv Hd 8gb 2gb Ram 60 Fps Wifi Bluetooth Hdmi 4ta Gen Blanco",
+    "description": "Nuevo",
+    "features": [],
+    "price": 13900,
+    "image1": "http://http2.mlstatic.com/D_963852-MLA96385225874_122023-I.jpg",
+    "stock": 9,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1424686231",
+    "name": "Google Chromecast 4 Generación Con Google Tv Hd Blanco",
+    "description": "Nuevo",
+    "features": [],
+    "price": 13500,
+    "image1": "http://http2.mlstatic.com/D_741258-MLA74125836985_122023-I.jpg",
+    "stock": 7,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1283577753",
+    "name": "Chromecast With Google Tv De Voz 4ª Generación 4k 8gb Snow Con 2gb De Memoria Ram",
+    "description": "Nuevo",
+    "features": [],
+    "price": 17900,
+    "image1": "http://http2.mlstatic.com/D_369852-MLA36985274185_122023-I.jpg",
+    "stock": 3,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1800896802",
+    "name": "Onn Google Tv Fhd Streaming Stick 2da Generación 8gb 1.5gb Ram Color Negro Control Remoto De Voz",
+    "description": "Nuevo",
+    "features": [],
+    "price": 12900,
+    "image1": "http://http2.mlstatic.com/D_852147-MLA85214796325_122023-I.jpg",
+    "stock": 5,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1410098380",
+    "name": "Amazon Echo Dot 5th Gen Con Asistente Virtual Alexa Negro 110v/240v Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 21900,
+    "image1": "http://http2.mlstatic.com/D_741258-MLA74125836985_122023-I.jpg",
+    "stock": 6,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1967470080",
+    "name": "Auriculares In-ear Xiaomi Redmi Buds Essential Black Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 3200,
+    "image1": "http://http2.mlstatic.com/D_789123-MLA78912325896_122023-I.jpg",
+    "stock": 12,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1439912092",
+    "name": "Auriculares Inalámbricos Bluetooth Sony Wh-ch520 Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 14900,
+    "image1": "http://http2.mlstatic.com/D_456789-MLA45678985214_122023-I.jpg",
+    "stock": 8,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1452402755",
+    "name": "Auriculares Inalámbricos Bluetooth Xiaomi Redmi Buds 6 Play Color Blanco",
+    "description": "Nuevo",
+    "features": [],
+    "price": 4500,
+    "image1": "http://http2.mlstatic.com/D_147852-MLA14785236985_122023-I.jpg",
+    "stock": 6,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1384557717",
+    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
+    "description": "Nuevo",
+    "features": [],
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_963852-MLA96385285214_122023-I.jpg",
+    "stock": 4,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1881762418",
+    "name": "Kit Video Streaming Microfono Para Celular Tripode Luz Led Color Negro",
+    "description": "Nuevo",
+    "features": [],
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_741258-MLA74125896325_122023-I.jpg",
+    "stock": 3,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1386412887",
+    "name": "2 Micrófonos Compatibles Con iPhone iPad Corbatero Megantech K910",
+    "description": "Nuevo",
+    "features": [],
+    "price": 9200,
+    "image1": "http://http2.mlstatic.com/D_852147-MLA85214725896_122023-I.jpg",
+    "stock": 8,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1137715997",
+    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
+    "description": "Nuevo",
+    "features": [],
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_963852-MLA96385245678_122023-I.jpg",
+    "stock": 10,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1805348104",
+    "name": "Parlante Jbl Go 4 Jblgo4 Portátil Con Bluetooth Waterproof Rojo 220v",
+    "description": "Nuevo",
+    "features": [],
+    "price": 15500,
+    "image1": "http://http2.mlstatic.com/D_741258-MLA74125814789_122023-I.jpg",
+    "stock": 6,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1453209909",
+    "name": "Parlante Portátil Bluetooth Soul Travel Riff Xs100",
+    "description": "Nuevo",
+    "features": [],
+    "price": 8900,
+    "image1": "http://http2.mlstatic.com/D_321654-MLA32165425896_122023-I.jpg",
+    "stock": 12,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1999738088",
+    "name": "Parlante Philco Djp15 Portátil Con Bluetooth Negro 220v 1500 W",
+    "description": "Nuevo",
+    "features": [],
+    "price": 25900,
+    "image1": "http://http2.mlstatic.com/D_852963-MLA85296336985_122023-I.jpg",
+    "stock": 5,
+    "category": "Parlantes"
   }
 ]
