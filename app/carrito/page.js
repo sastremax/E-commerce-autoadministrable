@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function CarritoPage() {
 
-     const [carrito, setCarrito] = useState([]);     
+     const [carrito, setCarrito] = useState([]);
 
      const eliminarProducto = (id) => {
           setCarrito(carrito.filter((item) => item.id !== id));
@@ -34,7 +34,7 @@ function CarritoPage() {
           <div className="min-h-screen bg-gray-100 p-6">
                <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
                     <h1 className="text-2xl font-bold mb-4 text-white">Carrito de Compras</h1>
-                    <div className="space-y-4">                        
+                    <div className="space-y-4">
                          <div className="flex justify-between items-center border-b pb-4">
                               <div>
                                    <h2 className="font-semibold text-gray-800">Televisor 4K</h2>
