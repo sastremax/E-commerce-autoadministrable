@@ -1,92 +1,86 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "@/providers/CartContext";
 import Link from "next/link";
 
-function CarritoPage() {
+export default function CarritoPage() {
+     const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
 
-     const [carrito, setCarrito] = useState([]);
-
-     const eliminarProducto = (id) => {
-          setCarrito(carrito.filter((item) => item.id !== id));
-     };
-
-     const agregarAlCarrito = (producto) => {
-          setCarrito((prevCarrito) => {
-               const productoExistente = prevCarrito.find((item) => item.id === producto.id);
-               if (productoExistente) {
-                    return prevCarrito.map((item) =>
-                         item.id === producto.id
-                              ? { ...item, cantidad: item.cantidad + 1 }
-                              : item
-                    );
-               }
-               return [...prevCarrito, { ...producto, cantidad: 1 }];
-          });
-     };
-
-     const subtotal = carrito.reduce(
-          (acc, item) => acc + item.precio * item.cantidad,
-          0
-     );
+     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
      return (
-          <div className="min-h-screen bg-gray-100 p-6">
-               <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
-                    <h1 className="text-2xl font-bold mb-4 text-white">Carrito de Compras</h1>
-                    <div className="space-y-4">
-                         <div className="flex justify-between items-center border-b pb-4">
-                              <div>
-                                   <h2 className="font-semibold text-gray-800">Televisor 4K</h2>
-                                   <p className="text-gray-600">Cantidad: 1</p>
-                              </div>
-                              <div className="text-blue-600 font-bold">$400.00</div>
+          <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 bg-white text-gray-800 rounded-lg shadow-lg mx-auto mt-10">
+               <h2 className="text-xl font-semibold">Tu carrito</h2>
+               {cartItems.length === 0 ? (
+                    <p>Tu carrito está vacío. <Link href="/">Volver a la tienda</Link></p>
+               ) : (
+                    <>
+                         <ul className="flex flex-col divide-y divide-gray-300">
+                              {cartItems.map((item) => (
+                                   <li
+                                        key={item.id}
+                                        className="flex flex-col py-6 sm:flex-row sm:justify-between"
+                                   >
+                                        <div className="flex w-full space-x-2 sm:space-x-4">
+                                             <img
+                                                  className="flex-shrink-0 object-contain w-20 h-20 border rounded sm:w-32 sm:h-32 bg-gray-100"
+                                                  src={item.image || "/images/placeholder.png"}
+                                                  alt={item.name}
+                                             />
+                                             <div className="flex flex-col justify-between w-full pb-4">
+                                                  <div className="flex justify-between w-full pb-2 space-x-2">
+                                                       <div className="space-y-1">
+                                                            <h3 className="text-lg font-semibold leading-snug sm:pr-8">
+                                                                 {item.name}
+                                                            </h3>
+                                                            <p className="text-sm text-gray-600">Cantidad: {item.quantity}</p>
+                                                       </div>
+                                                       <div className="text-right">
+                                                            <p className="text-lg font-semibold">
+                                                                 ${item.price.toLocaleString()}
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                                  <div className="flex text-sm divide-x">
+                                                       <button
+                                                            type="button"
+                                                            className="flex items-center px-2 py-1 pl-0 space-x-1 text-red-600"
+                                                            onClick={() => removeFromCart(item.id)}
+                                                       >
+                                                            <span>Eliminar</span>
+                                                       </button>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </li>
+                              ))}
+                         </ul>
+                         <div className="space-y-1 text-right">
+                              <p>Total: <span className="font-semibold">${subtotal.toLocaleString()}</span></p>
+                              <p className="text-sm text-gray-600">
+                                   No incluye impuestos ni costos de envío.
+                              </p>
                          </div>
-                         <div className="flex justify-between items-center border-b pb-4">
-                              <div>
-                                   <h2 className="font-semibold text-gray-800">Laptop Gaming</h2>
-                                   <p className="text-gray-600">Cantidad: 1</p>
-                              </div>
-                              <div className="text-blue-600 font-bold">$1200.00</div>
+                         <div className="flex justify-end space-x-4">
+                              <Link href="/">
+                                   <button
+                                        type="button"
+                                        className="px-6 py-2 border rounded-md border-blue-600 text-blue-600 hover:bg-blue-50"
+                                   >
+                                        Volver a la tienda
+                                   </button>
+                              </Link>
+                              <button
+                                   type="button"
+                                   className="px-6 py-2 border rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                                   onClick={clearCart}
+                              >
+                                   Vaciar carrito
+                              </button>
                          </div>
-                         <div className="flex justify-between items-center border-b pb-4">
-                              <div>
-                                   <h2 className="font-semibold text-gray-800">Audífonos Inalámbricos</h2>
-                                   <p className="text-gray-600">Cantidad: 2</p>
-                              </div>
-                              <div className="text-blue-600 font-bold">$300.00</div>
-                         </div>
-                    </div>
-                    <div className="mt-6 border-t pt-4">
-                         <div className="flex justify-between text-gray-800">
-                              <span>Subtotal</span>
-                              <span className="font-bold">$1900.00</span>
-                         </div>
-                         <div className="flex justify-between text-gray-800">
-                              <span>Descuento</span>
-                              <span className="font-bold text-green-600">- $100.00</span>
-                         </div>
-                         <div className="flex justify-between text-gray-800 mt-2 border-t pt-2">
-                              <span>Total</span>
-                              <span className="font-bold text-xl text-blue-600">$1800.00</span>
-                         </div>
-                    </div>
-                    <div className="mt-6 flex space-x-4">
-                         <Link href="/">
-                              <div className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300">
-                                   Seguir comprando
-                              </div>
-                         </Link>
-                         <button
-                              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                              type="button"
-                         >
-                              Proceder al pago
-                         </button>
-                    </div>
-               </div>
+                    </>
+               )}
           </div>
      );
 }
-
-export default CarritoPage;

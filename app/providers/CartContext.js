@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState, useCallback } from "react";
+import { createContext, useState, useCallback, useMemo } from "react";
 
 export const CartContext = createContext();
 
@@ -30,14 +30,19 @@ const CartProvider = ({ children }) => {
         setCartItems([]);
     }, []);
 
+    const contextValue = useMemo(
+        () => ({
+            cartItems,
+            addToCart,
+            removeFromCart,
+            clearCart,
+        }),
+        [cartItems, addToCart, removeFromCart, clearCart]
+    );
+
     return (
-        <CartContext.Provider 
-            value={{ 
-                cartItems,
-                addToCart,
-                removeFromCart,
-                clearCart,
-            }}
+        <CartContext.Provider
+            value={contextValue}
         >
             {children}
         </CartContext.Provider>
