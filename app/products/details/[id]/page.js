@@ -1,37 +1,37 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import PageTitle from "@/components/PageTitle";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../../../utils/config";
 
 export default async function ProductoPage({ params }) {
 
     const { id } = await params;
 
-    const resProducto = await fetch(`https://api.mercadolibre.com/items/${id}`);
-    const producto = await resProducto.json();
+    const docRef = doc(db, "productos", id);
+    const docSnap = await getDoc(docRef);
 
-    if (!resProducto.ok) {
+    if (!docSnap.exists()) {
         notFound();
     }
 
-    const resDescripcion = await fetch(`https://api.mercadolibre.com/items/${id}/description`);
-    const descripcionData = await resDescripcion.json();
-    const descripcionCompleta = descripcionData.plain_text || "Descripción no disponible";
-    
+    const producto = docSnap.data();
+
     const limitarPalabras = (texto, limite) => {
         const palabras = texto.split(" ");
         return palabras.length > limite ? `${palabras.slice(0, limite).join(" ")} ...` : texto;
     };
 
-    const descripcionCorta = limitarPalabras(descripcionCompleta, 90);
+    const descripcionCorta = limitarPalabras(producto.descripcion || "Descripción no disponible", 90);
 
     return (
         <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
             <PageTitle>Detalle del producto {id}</PageTitle>
-            <h1 className="text-2xl font-bold mb-4">{producto.title}</h1>
+            <h1 className="text-2xl font-bold mb-4">{producto.name}</h1>
             <div className="flex flex-col md:flex-row gap-6">
                 <img
-                    src={producto.thumbnail}
-                    alt={producto.title}
+                    src={producto.image1}
+                    alt={producto.name}
                     className="w-full md:w-1/2 rounded-lg"
                 />
                 <div className="md:w-1/2">
@@ -42,7 +42,7 @@ export default async function ProductoPage({ params }) {
                             ${producto.price.toLocaleString()}
                         </span>
                         <p className="text-sm text-gray-600">
-                            Stock disponible: {producto.available_quantity} unidades
+                            Stock disponible: {producto.stock} unidades
                         </p>
                     </div>
                     <div className="flex space-x-4">

@@ -6,14 +6,23 @@ export default function ProductLayout({ children }) {
             <aside className="min-w-[250px] bg-gray p-4 rounded-lg shadow">
                 <h2 className="text-lg font-bold mb-4">Categorías</h2>
                 <nav className="space-y-4">
-                    <Link href="/products/cat/celulares" className="block text-blue-600 hover:underline">
-                        Celulares
+                    <Link href="/products/cat/Baterías" className="block text-blue-600 hover:underline">
+                        Baterías
                     </Link>
-                    <Link href="/products/cat/laptops" className="block text-blue-600 hover:underline">
-                        Laptops
+                    <Link href="/products/cat/Televisores" className="block text-blue-600 hover:underline">
+                        Televisores
                     </Link>
-                    <Link href="/products/cat/accesorios" className="block text-blue-600 hover:underline">
-                        Accesorios
+                    <Link href="/products/cat/Auriculares" className="block text-blue-600 hover:underline">
+                        Auriculares
+                    </Link>
+                    <Link href="/products/cat/Parlantes" className="block text-blue-600 hover:underline">
+                        Parlantes
+                    </Link>
+                    <Link href="/products/cat/Micrófonos" className="block text-blue-600 hover:underline">
+                        Micrófonos
+                    </Link>
+                    <Link href="/products/cat/Streaming y Multimedia" className="block text-blue-600 hover:underline">
+                        Streaming y Multimedia
                     </Link>
                 </nav>
             </aside>
