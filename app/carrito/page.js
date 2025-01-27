@@ -5,9 +5,9 @@ import { CartContext } from "@/providers/CartContext";
 import Link from "next/link";
 
 export default function CarritoPage() {
-     const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
+     const { cartItems, addToCart, decreaseQuantity, removeFromCart, clearCart } = useContext(CartContext);
 
-     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+     const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
      return (
           <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 bg-white text-gray-800 rounded-lg shadow-lg mx-auto mt-10">
@@ -35,11 +35,31 @@ export default function CarritoPage() {
                                                                  {item.name}
                                                             </h3>
                                                             <p className="text-sm text-gray-600">Cantidad: {item.quantity}</p>
+                                                            <div className="flex items-center space-x-2 mt-2">
+                                                                 <button
+                                                                      type="button"
+                                                                      onClick={() => decreaseQuantity(item.id)} // Decrementar cantidad
+                                                                      className="px-2 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
+                                                                 >
+                                                                      -
+                                                                 </button>
+                                                                 <span className="px-2 text-gray-800 font-bold">
+                                                                      {item.quantity}
+                                                                 </span>
+                                                                 <button
+                                                                      type="button"
+                                                                      onClick={() => addToCart(item)} // Incrementar cantidad
+                                                                      className="px-2 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
+                                                                 >
+                                                                      +
+                                                                 </button>
+                                                            </div>
+
                                                        </div>
-                                                       <div className="text-right">
+                                                       <div className="text-right">                                                            
                                                             <p className="text-lg font-semibold">
-                                                                 ${item.price.toLocaleString()}
-                                                            </p>
+                                                                 Subtotal: ${(item.price * item.quantity).toLocaleString()}
+                                                            </p>                                                            
                                                        </div>
                                                   </div>
                                                   <div className="flex text-sm divide-x">
@@ -57,7 +77,7 @@ export default function CarritoPage() {
                               ))}
                          </ul>
                          <div className="space-y-1 text-right">
-                              <p>Total: <span className="font-semibold">${subtotal.toLocaleString()}</span></p>
+                                   <p>Total del carrito: <span className="font-semibold text-lg">${total.toLocaleString()}</span></p>
                               <p className="text-sm text-gray-600">
                                    No incluye impuestos ni costos de envío.
                               </p>
