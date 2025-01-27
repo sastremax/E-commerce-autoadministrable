@@ -13,27 +13,14 @@ const uploadOrUpdateProducts = async () => {
         for (const product of products) {
             console.log("Processing product:", product);
 
-            // Buscar si el producto ya existe en la base de datos por su ID único
-            const q = query(productsCollection, where("id", "==", product.id));
-            const querySnapshot = await getDocs(q);
+            const docRef = doc(productsCollection, product.id);
 
-            if (!querySnapshot.empty) {
-                // Si el producto ya existe, actualizarlo
-                const existingDoc = querySnapshot.docs[0];
-                const docRef = doc(db, "productos", existingDoc.id);
+            await setDoc(docRef, product, { merge: true });
+            console.log(`Product "${product.name}" uploaded/updated successfully with ID "${product.id}".`);
 
-                await setDoc(docRef, product, { merge: true });
-                console.log(`Product "${product.name}" updated successfully.`);
-            } else {
-                // Si el producto no existe, crear uno nuevo
-                const newDocRef = doc(productsCollection);
-                await setDoc(newDocRef, product);
-                console.log(`Product "${product.name}" uploaded successfully.`);
-            }
-
-            // Agregar un delay para evitar sobrecarga de Firestore
             await delay(200);
         }
+
     } catch (error) {
         console.error("Error uploading or updating products:", error);
     }

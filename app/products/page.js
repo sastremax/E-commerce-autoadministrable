@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import PageTitle from "@/components/PageTitle";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../../utils/config";
 
 export async function generateMetadata({ params }) {
     const { id } = params;
 
-    const producto = await fetch(`https://api.mercadolibre.com/items/${id}`).then(res => res.json());
-    if (!producto || producto.error) {
+    const docRef = doc(db, "productos", id);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) {
         return {
             title: "Producto no encontrado - LATAM PRODUCTS",
             description: "El producto que buscas no existe o ya no está disponible.",
@@ -13,27 +18,29 @@ export async function generateMetadata({ params }) {
         };
     }
 
+    const producto = docSnap.data();
+
     return {
-        title: `${producto.title} - LATAM PRODUCTS`,
+        title: `${producto.name} - LATAM PRODUCTS`,
         authors: [{ name: "Maximiliano Sastre" }],
         metadataBase: new URL("http://localhost:3000"),
         description: producto.description || "Detalles de este producto único.",
         keywords: [
-            producto.title,
+            producto.name,
             "productos electrónicos",
             "e-commerce",
             "LATAM PRODUCTS",
         ],
         robots: "index, follow",
         openGraph: {
-            title: `${producto.title} - LATAM PRODUCTS`,
+            title: `${producto.name} - LATAM PRODUCTS`,
             description: producto.description || "Detalles de este producto único.",
             images: [
                 {
-                    url: producto.thumbnail || "/images/default-product.webp",
+                    url: producto.image1 || "/images/default-product.webp",
                     width: 800,
                     height: 600,
-                    alt: producto.title,
+                    alt: producto.name,
                 },
             ],
         },
@@ -48,41 +55,44 @@ function limitarPalabras(texto, limite) {
 export default async function ProductoPage({ params }) {
 
     const { id } = params;
+
     console.log("Params:", params);
 
-    const resProducto = await fetch(`https://api.mercadolibre.com/items/${id}`);
-    const producto = await resProducto.json();
-    console.log("detalles", producto);
+    const docRef = doc(db, "productos", id);
+    const docSnap = await getDoc(docRef);
 
-    if (!resProducto.ok) {
+    if (!docSnap.exists()) {
         notFound();
     }
 
-    const resDescripcion = await fetch(`https://api.mercadolibre.com/items/${id}/description`);
-    const descripcionData = await resDescripcion.json();
-    const descripcion = resDescripcion.ok
-        ? descripcionData.plain_text || "Descripción no disponible"
-        : "Descripción no disponible";
+    const producto = docSnap.data();
 
-    const descripcionCorta = limitarPalabras(descripcion, 100);
+    const limitarPalabras = (texto, limite) => {
+        const palabras = texto.split(" ");
+        return palabras.length > limite ? `${palabras.slice(0, limite).join(" ")} ...` : texto;
+    };
+    const descripcionCorta = limitarPalabras(producto.description || "Descripción no disponible", 90);
 
     return (
         <main className="flex-1 p-6">
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
-                <h1 className="text-2xl font-bold mb-4">{producto.title}</h1>
+                <PageTitle>Detalle del producto {id}</PageTitle>
+                <h1 className="text-2xl font-bold mb-4">{producto.name}</h1>
                 <div className="flex flex-col md:flex-row">
                     <img
-                        src={producto.pictures?.[0]?.url || producto.thumbnail}
-                        alt={producto.title}
+                        src={producto.image1}
+                        alt={producto.name}
                         className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-4"
                     />
                     <div className="md:w-1/2">
                         <h2 className="text-lg font-semibold mb-2">Descripción</h2>
                         <p className="text-gray-700 mb-4">{descripcionCorta}</p>
                         <div className="mb-4">
-                            <span className="text-xl font-bold text-blue-600">${producto.price}</span>
+                            <span className="text-xl font-bold text-blue-600">
+                                ${producto.price.toLocaleString()}
+                            </span>
                             <p className="text-sm text-gray-600">
-                                Stock disponible: <strong>{producto.initial_quantity || "No disponible"} unidades</strong>
+                                Stock disponible: <strong>{producto.stock} unidades</strong>
                             </p>
                         </div>
                         <div className="flex space-x-4">
