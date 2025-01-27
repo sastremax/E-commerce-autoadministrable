@@ -25,7 +25,7 @@ export default function CarritoPage() {
                                         <div className="flex w-full space-x-2 sm:space-x-4">
                                              <img
                                                   className="flex-shrink-0 object-contain w-20 h-20 border rounded sm:w-32 sm:h-32 bg-gray-100"
-                                                  src={item.image || "/images/placeholder.png"}
+                                                  src={item.image1 || "/images/placeholder.png"}
                                                   alt={item.name}
                                              />
                                              <div className="flex flex-col justify-between w-full pb-4">

@@ -11,13 +11,23 @@ const CartProvider = ({ children }) => {
         setCartItems((prevItems) => {
             const existingProduct = prevItems.find((item) => item.id === product.id);
             if (existingProduct) {
-                return prevItems.map((item) =>
-                    item.id === product.id
-                        ? { ...item, quantity: item.quantity + 1 }
-                        : item
-                );
+
+                if (existingProduct.quantity < product.stock) {
+                    return prevItems.map((item) =>
+                        item.id === product.id
+                            ? { ...item, quantity: item.quantity + 1 }
+                            : item
+                    );
+                }
+                alert("No puedes agregar más productos de este tipo, alcanzaste el stock disponible.");
+                return prevItems;
             }
-            return [...prevItems, { ...product, quantity: 1 }];
+
+            if (product.stock > 0) {
+                return [...prevItems, { ...product, quantity: 1 }];
+            }
+            alert("Este producto está agotado.");
+            return prevItems;
         });
     }, []);
 
@@ -30,14 +40,30 @@ const CartProvider = ({ children }) => {
         setCartItems([]);
     }, []);
 
+    const decreaseQuantity = useCallback((productId) => {
+        setCartItems((prevItems) => {
+            return prevItems.map((item) => {
+                if (item.id === productId) {
+                    if (item.quantity > 1) {
+                        return { ...item, quantity: item.quantity - 1 };
+                    }
+                    return null;                    
+                }
+                return item;
+            })
+            .filter(Boolean);
+        });
+    }, []);
+
     const contextValue = useMemo(
         () => ({
             cartItems,
             addToCart,
             removeFromCart,
+            decreaseQuantity,
             clearCart,
         }),
-        [cartItems, addToCart, removeFromCart, clearCart]
+        [cartItems, addToCart, removeFromCart, decreaseQuantity, clearCart]
     );
 
     return (
