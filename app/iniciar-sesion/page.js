@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function IniciarSesionPage() {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, handleGoogleLogin } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -21,7 +21,17 @@ function IniciarSesionPage() {
         } catch (error) {
             setError("Credenciales incorrectas");
         }
-    };    
+    };
+
+    const handleGoogleSignIn = async () => {
+        setError("");
+        try {
+            await handleGoogleLogin();
+            router.push("/");
+        } catch (error) {
+            setError("Error al iniciar sesión con Google");
+        }
+    };
 
     return (
         <div className="w-full h-screen flex items-center justify-center bg-gray-100 text-gray-800">
@@ -37,8 +47,9 @@ function IniciarSesionPage() {
                     <button
                         aria-label="Loguear con Google"
                         type="button"
+                        onClick={handleGoogleSignIn}
                         className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-blue-600"
-                        
+
                     >
                         <p>Loguear con Google</p>
                     </button>

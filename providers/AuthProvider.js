@@ -6,6 +6,8 @@ import {
     signInWithEmailAndPassword,
     signOut,
     onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup,
 } from "firebase/auth";
 
 export const AuthContext = createContext();
@@ -17,7 +19,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setLoggedIn(!!user); // Convertimos "user" en un booleano
+            setLoggedIn(!!user);
         });
 
         return () => unsubscribe();
@@ -32,6 +34,16 @@ const AuthProvider = ({ children }) => {
         }
     };
 
+    const handleGoogleLogin = async () => {
+        try {
+            const provider = new GoogleAuthProvider();
+            await signInWithPopup(auth, provider);
+        } catch (error) {
+            console.error("Error al iniciar sesión con Google:", error.message);
+            throw error;
+        }
+    };
+
     const handleLogout = async () => {
         try {
             await signOut(auth);
@@ -42,7 +54,7 @@ const AuthProvider = ({ children }) => {
     };
 
     return (
-        <Provider value={{ loggedIn, handleLogin, handleLogout }}>
+        <Provider value={{ loggedIn, handleLogin, handleGoogleLogin, handleLogout }}>
             {children}
         </Provider>
     );
