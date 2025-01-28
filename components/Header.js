@@ -58,7 +58,7 @@ function Header() {
                     )}
                     <button
                          type="button"
-                         className="block md:hidden text-white focus:outline-none"
+                         className="block md:hidden text-black focus:outline-none"
                          aria-label="Abrir menú"
                          onClick={() => setMenuOpen(!menuOpen)}
                     >

@@ -1,20 +1,26 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../utils/config";
 import ProductList from "@/components/ProductList";
+import Filters from "@/components/Filters";
 
 function HomePage() {
 
      const [productos, setProductos] = useState([]);
      const [loading, setLoading] = useState(true);
+     const [selectedCategory, setSelectedCategory] = useState(null);
 
      useEffect(() => {
           const fetchData = async () => {
                setLoading(true);
                try {
-                    const querySnapshot = await getDocs(collection(db, "productos"));
+                    const productosRef = collection(db, "productos");
+                    const q = selectedCategory
+                         ? query(productosRef, where("category", "==", selectedCategory))
+                         : productosRef;
+                    const querySnapshot = await getDocs(q);
                     const productosFirestore = querySnapshot.docs.map((doc) => ({
                          id: doc.id,
                          ...doc.data(),
@@ -29,7 +35,7 @@ function HomePage() {
           };
 
           fetchData();
-     }, []);
+     }, [selectedCategory]);
 
      return (
           <div>
@@ -54,6 +60,9 @@ function HomePage() {
                     />
                </div>
                <div className="flex bg-white text-black">
+                    <aside className="min-w-[250px] p-4 bg-gray-100 rounded-lg shadow">
+                         <Filters onCategorySelect={(category) => setSelectedCategory(category)} />
+                    </aside>
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
                          {loading ? (
