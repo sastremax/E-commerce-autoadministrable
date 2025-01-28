@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { CartContext } from "@/providers/CartContext";
+import { CartContext } from "providers/CartContext";
 
 export default function ProductClient({ producto }) {
     const { addToCart } = useContext(CartContext);

@@ -1,7 +1,7 @@
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ProveedorDeAutenticacion from "@/providers/AuthProvider";
+import AuthProvider from "@/providers/AuthProvider";
 import CartProvider from "@/providers/CartContext";
 
 export const metadata = {
@@ -46,15 +46,15 @@ function RootLayout({ children }) {
                     <link rel="icon" href="/favicon.png" type="image/png" />
                </head>
                <body>
-                    <Header />
-                    <ProveedorDeAutenticacion>
+                    <AuthProvider>
+                         <Header />
                          <CartProvider>
                               <main className="grow p-4">
                                    {children}
                               </main>
                          </CartProvider>
-                    </ProveedorDeAutenticacion>
-                    <Footer />
+                         <Footer />
+                    </AuthProvider>
                </body>
           </html>
      );

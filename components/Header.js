@@ -2,11 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { AuthContext } from "@/providers/AuthProvider";
+import { useContext, useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import Button from "@/components/Button";
 
+
+
 function Header() {
+     const { loggedIn: user, handleLogout: signOutUser } = useContext(AuthContext);
      const [menuOpen, setMenuOpen] = useState(false);
 
      return (
@@ -17,8 +21,8 @@ function Header() {
                               src="/images/logolatam.webp"
                               alt="Logo de LATAM PRODUCTS"
                               width={90}
-                              height={100}                              
-                              className="rounded-lg"                              
+                              height={100}
+                              className="rounded-lg"
                          />
                          <span className="ml-2 text-xl font-bold tracking-wide">
                               PRODUCTOS LATAM
@@ -33,18 +37,25 @@ function Header() {
                          <Link href="/carrito" className="hover:text-gray-300">
                               <ShoppingCart className="h-6 w-6" />
                          </Link>
-                         <Link href="/admin" className="hover:text-gray-300">
-                              Admin
-                         </Link>
                     </nav>
-                    <Link href="/iniciar-sesion">
+                    {user ? (
                          <Button
-                              className="hidden md:block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                              className="hidden md:block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
                               type="button"
+                              onClick={signOutUser}
                          >
-                              Iniciar Sesión
+                              Cerrar Sesión
                          </Button>
-                    </Link>
+                    ) : (
+                         <Link href="/iniciar-sesion">
+                              <Button
+                                   className="hidden md:block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                                   type="button"
+                              >
+                                   Iniciar Sesión
+                              </Button>
+                         </Link>
+                    )}
                     <button
                          type="button"
                          className="block md:hidden text-white focus:outline-none"

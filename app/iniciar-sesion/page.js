@@ -1,14 +1,27 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useContext, useState } from "react";
+import { AuthContext } from "@/providers/AuthProvider";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-function iniciarSesionPage() {
+function IniciarSesionPage() {
+    const { signIn } = useContext(AuthContext);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
     const router = useRouter();
 
-    const handlePasswordClick = () => {
-        router.push("/");
-    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError("");
+        try {
+            await signIn(email, password);
+            router.push("/");
+        } catch (error) {
+            setError("Credenciales incorrectas");
+        }
+    };    
 
     return (
         <div className="w-full h-screen flex items-center justify-center bg-gray-100 text-gray-800">
@@ -25,11 +38,12 @@ function iniciarSesionPage() {
                         aria-label="Loguear con Google"
                         type="button"
                         className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-600 focus:ring-blue-600"
+                        
                     >
                         <p>Loguear con Google</p>
                     </button>
                 </div>
-                <form noValidate="" className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="space-y-4">
                         <div className="space-y-2">
                             <label htmlFor="email" className="block text-sm">Correo electrónico</label>
@@ -38,7 +52,10 @@ function iniciarSesionPage() {
                                 name="email"
                                 id="email"
                                 placeholder="correo@ejemplo.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-blue-600"
+                                required
                             />
                         </div>
                         <div className="space-y-2">
@@ -48,15 +65,17 @@ function iniciarSesionPage() {
                                 name="password"
                                 id="password"
                                 placeholder="*******"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-blue-600"
-                                onClick={handlePasswordClick}
+                                required
                             />
                         </div>
                     </div>
+                    {error && <p className="text-red-500 text-center">{error}</p>}
                     <button
                         type="submit"
                         className="w-full px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50"
-                        onClick={handlePasswordClick}
                     >
                         Iniciar sesión
                     </button>
@@ -66,4 +85,4 @@ function iniciarSesionPage() {
     );
 }
 
-export default iniciarSesionPage;
+export default IniciarSesionPage;

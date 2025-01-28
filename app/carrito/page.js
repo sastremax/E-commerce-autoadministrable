@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { CartContext } from "@/providers/CartContext";
+import { CartContext } from "providers/CartContext";
 import Link from "next/link";
 
 export default function CarritoPage() {
@@ -56,10 +56,10 @@ export default function CarritoPage() {
                                                             </div>
 
                                                        </div>
-                                                       <div className="text-right">                                                            
+                                                       <div className="text-right">
                                                             <p className="text-lg font-semibold">
                                                                  Subtotal: ${(item.price * item.quantity).toLocaleString()}
-                                                            </p>                                                            
+                                                            </p>
                                                        </div>
                                                   </div>
                                                   <div className="flex text-sm divide-x">
@@ -77,7 +77,7 @@ export default function CarritoPage() {
                               ))}
                          </ul>
                          <div className="space-y-1 text-right">
-                                   <p>Total del carrito: <span className="font-semibold text-lg">${total.toLocaleString()}</span></p>
+                              <p>Total del carrito: <span className="font-semibold text-lg">${total.toLocaleString()}</span></p>
                               <p className="text-sm text-gray-600">
                                    No incluye impuestos ni costos de envío.
                               </p>
