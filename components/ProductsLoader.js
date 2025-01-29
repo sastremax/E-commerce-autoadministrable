@@ -1,10 +1,14 @@
+import Loading from "./Loading";
+
 function ProductsLoader() {
     return (
         <>
-            <div className="aspect-[1/1.15] bg-gray-200 animate-pulse" />
-            <div className="aspect-[1/1.15] bg-gray-200 animate-pulse" />
-            <div className="aspect-[1/1.15] bg-gray-200 animate-pulse" />
-            <div className="aspect-[1/1.15] bg-gray-200 animate-pulse" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
+            <Loading className="aspect-[1/1.15] bg-gray-200 animate-pulse rounded-lg" />
         </>
     );
 }

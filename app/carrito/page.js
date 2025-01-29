@@ -8,6 +8,10 @@ export default function CarritoPage() {
      const { cartItems, addToCart, decreaseQuantity, removeFromCart, clearCart } = useContext(CartContext);
 
      const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+     const IVA_RATE = 0.21;
+     const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+     const iva = subtotal * IVA_RATE;
+     const totalConIVA = subtotal + iva;
 
      return (
           <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 bg-white text-gray-800 rounded-lg shadow-lg mx-auto mt-10">
@@ -77,9 +81,11 @@ export default function CarritoPage() {
                               ))}
                          </ul>
                          <div className="space-y-1 text-right">
-                              <p>Total del carrito: <span className="font-semibold text-lg">${total.toLocaleString()}</span></p>
+                              <p>Subtotal: <span className="font-semibold text-lg">${subtotal.toLocaleString()}</span></p>
+                              <p>IVA (21%): <span className="font-semibold text-lg">${iva.toLocaleString()}</span></p>
+                              <p>Total del carrito: <span className="font-semibold text-lg">${totalConIVA.toLocaleString()}</span></p>
                               <p className="text-sm text-gray-600">
-                                   No incluye impuestos ni costos de envío.
+                                   Incluye impuestos pero no costos de envío.
                               </p>
                          </div>
                          <div className="flex justify-end space-x-4">

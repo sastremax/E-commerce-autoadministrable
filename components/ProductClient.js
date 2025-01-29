@@ -11,7 +11,7 @@ export default function ProductClient({ producto }) {
         return palabras.length > limite ? `${palabras.slice(0, limite).join(" ")} ...` : texto;
     };
 
-    const descripcionCorta = limitarPalabras(producto.descripcion || "Descripción no disponible", 90);
+    const descripcionCorta = limitarPalabras(producto.name || "Descripción no disponible", 90);
 
     return (
         <div className="flex flex-col md:flex-row gap-6">
@@ -23,6 +23,7 @@ export default function ProductClient({ producto }) {
             <div className="md:w-1/2">
                 <h2 className="text-lg font-semibold mb-2">Descripción</h2>
                 <p className="text-gray-700 mb-4">{descripcionCorta}</p>
+                <p className="text-sm text-gray-500">Estado: {producto.description}</p>
                 <div className="mb-4">
                     <span className="text-xl font-bold text-blue-600">
                         ${producto.price.toLocaleString()}
@@ -47,6 +48,6 @@ export default function ProductClient({ producto }) {
                     </a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

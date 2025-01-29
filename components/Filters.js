@@ -9,7 +9,7 @@ const categories = [
 
 function Filters({ onCategorySelect }) {
     return (
-        <aside className="min-w-[250px] bg-gray p-4 rounded-lg shadow">
+        <aside className="min-w-[250px] bg-white p-4 rounded-lg shadow">
             <h2 className="text-lg font-bold mb-4">Categorías</h2>
             <nav className="space-y-4">
                 <button

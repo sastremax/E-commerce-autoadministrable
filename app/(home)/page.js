@@ -5,6 +5,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../utils/config";
 import ProductList from "@/components/ProductList";
 import Filters from "@/components/Filters";
+import ProductsLoader from "@/components/ProductsLoader";
 
 function HomePage() {
 
@@ -15,6 +16,8 @@ function HomePage() {
      useEffect(() => {
           const fetchData = async () => {
                setLoading(true);
+               setProductos([]);
+
                try {
                     const productosRef = collection(db, "productos");
                     const q = selectedCategory
@@ -60,20 +63,12 @@ function HomePage() {
                     />
                </div>
                <div className="flex bg-white text-black">
-                    <aside className="min-w-[250px] p-4 bg-gray-100 rounded-lg shadow">
-                         <Filters onCategorySelect={(category) => setSelectedCategory(category)} />
+                    <aside className="min-w-[250px] p-4 bg-white rounded-lg shadow">
+                         <Filters onCategorySelect={setSelectedCategory} />
                     </aside>
                     <main className="flex-1 p-6">
                          <h1 className="text-xl font-bold mb-6">Catálogo de Productos Electrónicos</h1>
-                         {loading ? (
-                              <div className="flex items-center justify-center space-x-2">
-                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
-                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
-                                   <div className="w-4 h-4 rounded-full animate-pulse bg-blue-600" />
-                              </div>
-                         ) : (
-                              <ProductList productos={productos} />
-                         )}
+                         {loading ? <ProductsLoader /> : <ProductList productos={productos} isLoading={loading} />}
                     </main>
                </div>
           </div>

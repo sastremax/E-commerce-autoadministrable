@@ -2,8 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ProductsLoader from "./ProductsLoader";
 
-function ProductList({ productos }) {
+function ProductList({ productos, isLoading }) {
+
+    if (isLoading) {
+        return <ProductsLoader />;
+    }
+
     if (!productos || productos.length === 0) {
         return <p className="text-center text-gray-400">No hay productos</p>;
     }
@@ -27,7 +33,7 @@ function ProductList({ productos }) {
                     <div className="h-full flex flex-col">
                         <div className="relative w-full h-48 mb-4">
                             <Image
-                                src={producto.image1}
+                                src={producto.image1 || "../public/images/image-not-avaible.webp"}
                                 alt={producto.name || "Producto sin nombre"}
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -36,7 +42,10 @@ function ProductList({ productos }) {
                             />
                         </div>
                         <h2 className="text-lg font-semibold mb-2">{producto.name}</h2>
-                        <p className="text-sm mb-4">{producto.description}</p>
+                        <p className="text-sm text-gray-700 mb-2">
+                            {producto.description || "Sin descripción disponible"}
+                        </p>
+                        <p className="text-xs text-gray-500">Estado: {producto.description || "Desconocido"}</p>
                         <div className="mt-auto">
                             <span className="text-blue-600 font-bold">
                                 ${producto.price.toLocaleString()}
