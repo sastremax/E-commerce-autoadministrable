@@ -22,6 +22,7 @@ function Header() {
                               alt="Logo de LATAM PRODUCTS"
                               width={90}
                               height={100}
+                              priority
                               className="rounded-lg"
                          />
                          <span className="ml-2 text-xl font-bold tracking-wide">

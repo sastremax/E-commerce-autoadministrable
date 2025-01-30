@@ -1,0 +1,446 @@
+[
+  {
+    "id": "MLA1393220061",
+    "name": "Smart Tv Tcl L43d5400 43'' Full Hd Led",
+    "description": "Nuevo",
+    "descripcion_corta": "Smart TV TCL 43'' Full HD con tecnología LED, ideal para el hogar.",
+    "descripcion_larga": "Disfruta de imágenes nítidas y de alta calidad con la Smart TV TCL L43d5400 de 43 pulgadas. Su resolución Full HD y tecnología LED garantizan una experiencia visual impresionante. Incluye acceso a aplicaciones de streaming como Netflix y YouTube, brindando entretenimiento de alta calidad en todo momento, ideal para cualquier espacio en tu hogar.",
+    "features": [
+      "Pantalla de 43 pulgadas",
+      "Resolución Full HD",
+      "Tecnología LED",
+      "Smart TV con múltiples aplicaciones"
+    ],
+    "price": 399999,
+    "image1": "http://http2.mlstatic.com/D_999083-MLU76641166768_062024-O.jpg",
+    "stock": 500,
+    "category": "Televisores"
+  },
+  {
+    "id": "MLA1458212639",
+    "name": "Auriculares Bluetooth In-ear F9-5 Negro Inalámbricos",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares Bluetooth in-ear F9-5 con sonido de alta calidad y diseño ergonómico.",
+    "descripcion_larga": "Los auriculares Bluetooth in-ear F9-5 ofrecen una calidad de sonido superior, con un diseño ergonómico y cómoda conectividad inalámbrica. Son ideales para hacer ejercicio, escuchar música o atender llamadas. Con hasta 6 horas de autonomía, te permiten disfrutar de tu música favorita en cualquier momento, sin cables ni interrupciones.",
+    "features": [
+      "Sonido de alta calidad",
+      "Conexión Bluetooth",
+      "Diseño ergonómico y cómodo",
+      "Autonomía de hasta 6 horas"
+    ],
+    "price": 5349,
+    "image1": "http://http2.mlstatic.com/D_606799-MLA53246315039_012023-O.jpg",
+    "stock": 200,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1137715997",
+    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
+    "description": "Nuevo",
+    "descripcion_corta": "Parlante portátil Spica Sp-4408 con Bluetooth, RGB LED y funciones de karaoke y radio FM.",
+    "descripcion_larga": "Disfruta de un sonido envolvente con el parlante portátil Spica Sp-4408. Incluye funciones avanzadas como Bluetooth, RGB LED, karaoke y radio FM. Ideal para fiestas y reuniones, proporciona un ambiente único con su iluminación LED y te permite escuchar música de manera inalámbrica. Con su diseño compacto, lo puedes llevar a cualquier lugar.",
+    "features": [
+      "Bluetooth",
+      "RGB LED",
+      "Función de karaoke",
+      "Radio FM y puerto USB"
+    ],
+    "price": 74099.43,
+    "image1": "http://http2.mlstatic.com/D_816810-MLU72700970573_112023-O.jpg",
+    "stock": 250,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1915925896",
+    "name": "Auriculares Bluetooth Lenovo Sports Racing Xt80, Color Negro Y Azul Claro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares Bluetooth Lenovo Sports Racing Xt80 con diseño deportivo y sonido claro.",
+    "descripcion_larga": "Los auriculares Bluetooth Lenovo Sports Racing Xt80 ofrecen un sonido de alta calidad con un diseño deportivo, ideales para entrenamientos o actividades al aire libre. Además, cuentan con tecnología de cancelación de ruido. Con su ajuste ergonómico, son perfectos para mantenerte enfocado durante tus ejercicios o viajes.",
+    "features": [
+      "Diseño deportivo",
+      "Conexión Bluetooth",
+      "Sonido claro y nítido",
+      "Cancelación de ruido"
+    ],
+    "price": 30029,
+    "image1": "http://http2.mlstatic.com/D_945691-MLU76682031827_052024-O.jpg",
+    "stock": 250,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1384557717",
+    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
+    "description": "Nuevo",
+    "descripcion_corta": "Micrófono inalámbrico corbatero Megan Tech K8 compatible con iPhone y iPad.",
+    "descripcion_larga": "Este micrófono inalámbrico corbatero Megan Tech K8 ofrece una excelente calidad de sonido, ideal para creadores de contenido, influencers y grabaciones de calidad profesional. Su compatibilidad con dispositivos Apple lo convierte en una herramienta versátil para cualquier creador. Perfecto para grabaciones de video, podcasting y más.",
+    "features": [
+      "Conexión USB-C y Lightning",
+      "Ideal para creadores de contenido",
+      "Sonido de alta calidad",
+      "Diseño compacto"
+    ],
+    "price": 15505.2,
+    "image1": "http://http2.mlstatic.com/D_735328-MLU72756733172_112023-O.jpg",
+    "stock": 250,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1464115167",
+    "name": "Roku Express 3960 Estándar Hd Con Control Remoto Negro 512 Mb",
+    "description": "Nuevo",
+    "descripcion_corta": "Disfruta de tus series y películas favoritas con Roku Express 3960, calidad HD y control remoto incluido.",
+    "descripcion_larga": "Roku Express 3960 es un dispositivo de streaming fácil de usar que te permite acceder a contenido en HD. Con control remoto incluido, es compatible con las aplicaciones más populares como Netflix, YouTube y Amazon Prime Video. La instalación es rápida y fácil, y puedes conectarlo a tu televisor para disfrutar de horas de entretenimiento.",
+    "features": [
+      "Resolución HD",
+      "Control remoto incluido",
+      "Compatibilidad con Netflix, YouTube, Amazon Prime Video",
+      "Fácil instalación"
+    ],
+    "price": 46543,
+    "image1": "http://http2.mlstatic.com/D_769811-MLU74194881535_012024-O.jpg",
+    "stock": 100,
+    "category": "Streaming y Multimedia"
+  },
+  {
+    "id": "MLA1449745363",
+    "name": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Bluetooth 5.4 Color Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares Xiaomi Redmi Buds 6 con Bluetooth 5.4 y sonido claro.",
+    "descripcion_larga": "Los auriculares Xiaomi Redmi Buds 6 Play ofrecen una experiencia auditiva superior con Bluetooth 5.4, proporcionando conectividad rápida y estable. Su diseño ergonómico y compacto asegura un ajuste cómodo durante todo el día. Ideales para escuchar música, hacer llamadas y entrenar, estos auriculares ofrecen hasta 8 horas de autonomía con una sola carga.",
+    "features": [
+      "Conexión Bluetooth 5.4",
+      "Sonido claro y nítido",
+      "Diseño ergonómico",
+      "Hasta 8 horas de autonomía"
+    ],
+    "price": 22889,
+    "image1": "http://http2.mlstatic.com/D_833941-MLU78764933573_082024-O.jpg",
+    "stock": 500,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1987374428",
+    "name": "Smart Tv Quint 43 Pulgadas Qt3-43gtv2024 Full Hd Google Tv",
+    "description": "Nuevo",
+    "descripcion_corta": "Smart TV Quint de 43 pulgadas con Full HD y Google TV integrado.",
+    "descripcion_larga": "La Smart TV Quint de 43 pulgadas te ofrece resolución Full HD y una experiencia de navegación intuitiva con Google TV. Accede a tus aplicaciones favoritas como Netflix, YouTube, y Disney+, y disfruta de imágenes nítidas con colores vibrantes. Ideal para cualquier sala o habitación, su diseño elegante y delgado complementa cualquier espacio.",
+    "features": [
+      "Pantalla de 43 pulgadas",
+      "Resolución Full HD",
+      "Google TV integrado",
+      "Acceso a aplicaciones como Netflix, YouTube"
+    ],
+    "price": 352091,
+    "image1": "http://http2.mlstatic.com/D_894658-MLA81403950158_122024-O.jpg",
+    "stock": 2,
+    "category": "Televisores"
+  },
+  {
+    "id": "MLA1453361871",
+    "name": "Auriculares Inalámbricos Lenovo Livepod Lp75 Bluetooth Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares Lenovo Livepod LP75 con Bluetooth y diseño moderno.",
+    "descripcion_larga": "Los auriculares Lenovo Livepod LP75 ofrecen un sonido claro y profundo con tecnología Bluetooth para una conectividad sin cables. Su diseño moderno y liviano asegura comodidad durante todo el día, mientras que su batería de larga duración permite hasta 12 horas de uso continuo. Perfectos para música, llamadas y ejercicio.",
+    "features": [
+      "Conexión Bluetooth",
+      "Sonido claro y profundo",
+      "Diseño moderno y liviano",
+      "Hasta 12 horas de uso continuo"
+    ],
+    "price": 30375,
+    "image1": "http://http2.mlstatic.com/D_750131-MLU77424111692_072024-O.jpg",
+    "stock": 50,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1624353712",
+    "name": "Auricular Bluetooth Fanpro F10 Plus",
+    "description": "Nuevo",
+    "descripcion_corta": "Auricular Bluetooth Fanpro F10 Plus con sonido potente y diseño compacto.",
+    "descripcion_larga": "El auricular Bluetooth Fanpro F10 Plus está diseñado para ofrecer un sonido de alta calidad con bajos profundos y agudos nítidos. Su diseño compacto lo hace ideal para el uso diario, tanto en casa como en exteriores. Con una batería de larga duración, podrás disfrutar de hasta 8 horas de música continua.",
+    "features": [
+      "Sonido potente",
+      "Conexión Bluetooth",
+      "Diseño compacto y ergonómico",
+      "Hasta 8 horas de autonomía"
+    ],
+    "price": 3200,
+    "image1": "http://http2.mlstatic.com/D_921969-MLU77724619049_072024-O.jpg",
+    "stock": 5,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1700687282",
+    "name": "Auriculares Jbl Tune 520 Bt Bluetooth On Ear Color Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares JBL Tune 520 BT, Bluetooth On Ear con sonido superior.",
+    "descripcion_larga": "Los auriculares JBL Tune 520 BT proporcionan un sonido de alta calidad con graves profundos y agudos nítidos. Su diseño On Ear garantiza un ajuste cómodo, ideal para usar durante largas sesiones de escucha. Con Bluetooth, se conectan fácilmente a tus dispositivos, y su batería de larga duración te ofrece horas de música.",
+    "features": [
+      "Sonido superior con graves profundos",
+      "Conexión Bluetooth",
+      "Diseño On Ear cómodo",
+      "Larga duración de batería"
+    ],
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_620584-MLU73328415130_122023-O.jpg",
+    "stock": 7,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1294245045",
+    "name": "Auriculares In-ear Gamer Inalámbricos Tws F9-5 Bth-f9-5 Negro Con Luz Led",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares gamer TWS F9-5 con luz LED y Bluetooth, ideales para juegos.",
+    "descripcion_larga": "Los auriculares gamer TWS F9-5 ofrecen sonido de alta calidad con Bluetooth y luces LED. Son ideales para una experiencia de juego inmersiva, ya que cuentan con una excelente calidad de audio y un ajuste cómodo para largas sesiones de juego. Su diseño moderno y atractivo los hace perfectos para jugadores de todo tipo.",
+    "features": [
+      "Sonido de alta calidad",
+      "Conexión Bluetooth",
+      "Luces LED",
+      "Diseño cómodo para juegos"
+    ],
+    "price": 4100,
+    "image1": "http://http2.mlstatic.com/D_641897-MLU75436656710_042024-O.jpg",
+    "stock": 8,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1899536466",
+    "name": "Auriculares M10 Pro Hi Fi Power Bank Color Negro Luz Blanco",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares M10 Pro Hi-Fi con power bank integrado y luz blanca.",
+    "descripcion_larga": "Los auriculares M10 Pro Hi-Fi ofrecen un sonido de calidad profesional con un diseño compacto y elegante. Vienen con un power bank integrado, lo que te permite cargar tus dispositivos mientras disfrutas de la música. Con su luz blanca, estos auriculares también aportan un toque único de estilo.",
+    "features": [
+      "Sonido Hi-Fi de calidad profesional",
+      "Power bank integrado",
+      "Luz blanca atractiva",
+      "Diseño compacto y elegante"
+    ],
+    "price": 4700,
+    "image1": "http://http2.mlstatic.com/D_696590-MLU79065106601_092024-O.jpg",
+    "stock": 12,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1463014199",
+    "name": "Auriculares Vincha Inalámbricos Bluetooth Jbl Tune 520bt Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares JBL Tune 520BT con vincha, Bluetooth y sonido claro.",
+    "descripcion_larga": "Los auriculares JBL Tune 520BT tienen un sonido claro y nítido, con una vincha ajustable para mayor comodidad. Con conectividad Bluetooth, puedes disfrutar de tu música favorita de forma inalámbrica. Su diseño cómodo y ligero es perfecto para usarlos durante todo el día, y la duración de su batería te permite disfrutar de largas sesiones de escucha.",
+    "features": [
+      "Sonido claro y nítido",
+      "Conexión Bluetooth",
+      "Diseño cómodo y ajustable",
+      "Larga duración de batería"
+    ],
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_986177-MLU73187129209_122023-O.jpg",
+    "stock": 4,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1430836403",
+    "name": "Auriculares Kz Edx Pro In-ear Sin Microfono Negro Monitoreo",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares KZ EDX Pro, in-ear, ideales para monitoreo y sonido de calidad.",
+    "descripcion_larga": "Los auriculares KZ EDX Pro son perfectos para quienes buscan calidad de sonido en un diseño compacto. Su conectividad in-ear y el diseño sin micrófono permiten una experiencia auditiva profesional, ideal para monitoreo. Su respuesta de frecuencia precisa ofrece graves profundos y agudos claros, adecuados para músicos y técnicos de sonido.",
+    "features": [
+      "Sonido de alta calidad",
+      "Diseño in-ear",
+      "Ideal para monitoreo",
+      "Respuesta de frecuencia precisa"
+    ],
+    "price": 3200,
+    "image1": "http://http2.mlstatic.com/D_826749-MLA51090332263_082022-O.jpg",
+    "stock": 14,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1467824991",
+    "name": "Auriculares In-ear Inalámbricos Jbl Tws Wave Buds Tws Jblwbuds Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares inalámbricos JBL TWS Wave Buds, diseño compacto y sonido nítido.",
+    "descripcion_larga": "Los auriculares JBL TWS Wave Buds ofrecen una experiencia de sonido inalámbrica nítida con un diseño compacto. Con Bluetooth, son fáciles de conectar a tu dispositivo y ofrecen hasta 8 horas de reproducción continua. Su ajuste ergonómico garantiza comodidad durante todo el día, mientras que el sonido claro y balanceado hace que sean ideales para todo tipo de contenido.",
+    "features": [
+      "Conexión inalámbrica Bluetooth",
+      "Hasta 8 horas de autonomía",
+      "Diseño ergonómico",
+      "Sonido claro y balanceado"
+    ],
+    "price": 5300,
+    "image1": "http://http2.mlstatic.com/D_856831-MLA77594091983_072024-O.jpg",
+    "stock": 9,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA2001611648",
+    "name": "Auriculares Inalámbricos Bt Xiaomi Redmi Buds 6 Active Color Blanco",
+    "description": "Nuevo",
+    "descripcion_corta": "Auriculares Xiaomi Redmi Buds 6 con Bluetooth, diseño cómodo y sonido claro.",
+    "descripcion_larga": "Los auriculares Xiaomi Redmi Buds 6 Active ofrecen conectividad Bluetooth con un sonido claro y equilibrado. Su diseño ergonómico asegura un ajuste cómodo, ideal para hacer ejercicio, escuchar música o atender llamadas. Con una batería de larga duración, estos auriculares proporcionan hasta 10 horas de uso continuado, convirtiéndolos en una opción excelente para el día a día.",
+    "features": [
+      "Conexión Bluetooth",
+      "Sonido claro y equilibrado",
+      "Diseño ergonómico",
+      "Hasta 10 horas de autonomía"
+    ],
+    "price": 3500,
+    "image1": "http://http2.mlstatic.com/D_886320-MLU77856903267_072024-O.jpg",
+    "stock": 15,
+    "category": "Auriculares"
+  },
+  {
+    "id": "MLA1384557717",
+    "name": "Microfono Corbatero Inalambrico Compatible Celular iPhone iPad Color Negro Megan Tech K8 Usb-c Lightning Ideal Influencer Creador De Contenido",
+    "description": "Nuevo",
+    "descripcion_corta": "Micrófono inalámbrico Megan Tech K8, ideal para creadores de contenido y grabaciones profesionales.",
+    "descripcion_larga": "El micrófono inalámbrico Megan Tech K8 es compatible con iPhone y iPad, y está diseñado para grabaciones de alta calidad. Su conexión USB-C y Lightning lo convierte en una opción versátil para creadores de contenido y profesionales. Con sonido claro y nítido, es ideal para grabaciones de video, podcasting y streaming en vivo.",
+    "features": [
+      "Conexión USB-C y Lightning",
+      "Ideal para creadores de contenido",
+      "Sonido de alta calidad",
+      "Diseño compacto"
+    ],
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_735328-MLU72756733172_112023-O.jpg",
+    "stock": 2,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1881762418",
+    "name": "Kit Video Streaming Microfono Para Celular Tripode Luz Led Color Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Kit completo para streaming: micrófono, trípode y luz LED.",
+    "descripcion_larga": "Este kit para streaming incluye un micrófono de alta calidad, un trípode ajustable y una luz LED para asegurar que tus grabaciones tengan la mejor iluminación. Es ideal para creadores de contenido, influencers o cualquier persona que quiera mejorar la calidad de sus videos y transmisiones en vivo. El diseño compacto y portátil lo hace fácil de usar en cualquier lugar.",
+    "features": [
+      "Micrófono de alta calidad",
+      "Trípode ajustable",
+      "Luz LED para mejorar la iluminación",
+      "Diseño portátil y compacto"
+    ],
+    "price": 12500,
+    "image1": "http://http2.mlstatic.com/D_828480-MLU71542334326_092023-O.jpg",
+    "stock": 6,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1386412887",
+    "name": "2 Micrófonos Compatibles Con iPhone iPad Corbatero Megantech K910",
+    "description": "Nuevo",
+    "descripcion_corta": "Micrófonos Megantech K910 compatibles con iPhone y iPad, ideales para grabaciones de calidad.",
+    "descripcion_larga": "Los micrófonos Megantech K910 son ideales para grabaciones de alta calidad. Compatibles con dispositivos iPhone y iPad, ofrecen una calidad de sonido clara y precisa. Son perfectos para creadores de contenido, podcasting, entrevistas o cualquier actividad que requiera un micrófono profesional. Su diseño compacto facilita el transporte y uso en cualquier lugar.",
+    "features": [
+      "Compatibles con iPhone y iPad",
+      "Sonido claro y preciso",
+      "Diseño compacto",
+      "Ideal para grabaciones y podcasting"
+    ],
+    "price": 9200,
+    "image1": "http://http2.mlstatic.com/D_732852-MLU77997766610_082024-O.jpg",
+    "stock": 5,
+    "category": "Micrófonos"
+  },
+  {
+    "id": "MLA1137715997",
+    "name": "Parlante Portátil Spica Sp-4408 Bluetooth, Rgb Led, Negro, Karaoke, Radio Fm, Usb - 220v",
+    "description": "Nuevo",
+    "descripcion_corta": "Parlante portátil Spica con Bluetooth, RGB LED, karaoke y radio FM.",
+    "descripcion_larga": "El parlante portátil Spica SP-4408 incluye Bluetooth, RGB LED, karaoke y radio FM. Ideal para fiestas, reuniones o eventos al aire libre, este parlante ofrece un sonido potente y claro. Además, su batería de larga duración y su diseño compacto lo hacen fácil de transportar y usar en cualquier lugar.",
+    "features": [
+      "Bluetooth",
+      "RGB LED",
+      "Función de karaoke",
+      "Radio FM y puerto USB"
+    ],
+    "price": 7500,
+    "image1": "http://http2.mlstatic.com/D_816810-MLU72700970573_112023-O.jpg",
+    "stock": 10,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1805348104",
+    "name": "Parlante Jbl Go 4 Jblgo4 Portátil Con Bluetooth Waterproof Rojo 220v",
+    "description": "Nuevo",
+    "descripcion_corta": "Parlante JBL Go 4 portátil con Bluetooth y diseño resistente al agua.",
+    "descripcion_larga": "El parlante JBL Go 4 es portátil, resistente al agua y tiene Bluetooth para conectividad inalámbrica. Con un diseño compacto, es ideal para llevarlo a la playa, gimnasio o cualquier lugar donde necesites música de alta calidad. Su batería de larga duración asegura horas de entretenimiento, y el sonido nítido lo convierte en una excelente opción.",
+    "features": [
+      "Bluetooth",
+      "Resistente al agua",
+      "Diseño compacto y portátil",
+      "Larga duración de batería"
+    ],
+    "price": 15500,
+    "image1": "http://http2.mlstatic.com/D_976576-MLU76371377173_052024-O.jpg",
+    "stock": 5,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1453209909",
+    "name": "Parlante Portátil Bluetooth Soul Travel Riff Xs100",
+    "description": "Nuevo",
+    "descripcion_corta": "Parlante Bluetooth Soul Travel Riff XS100 con sonido de calidad y diseño compacto.",
+    "descripcion_larga": "El parlante Soul Travel Riff XS100 ofrece sonido de alta calidad y conectividad Bluetooth. Su diseño compacto lo hace ideal para viajar y llevar a cualquier lugar. Además, tiene una batería de larga duración que te permitirá disfrutar de música sin interrupciones durante horas.",
+    "features": [
+      "Conexión Bluetooth",
+      "Sonido de alta calidad",
+      "Diseño compacto y portátil",
+      "Larga duración de batería"
+    ],
+    "price": 8900,
+    "image1": "http://http2.mlstatic.com/D_673571-MLU69137609581_042023-O.jpg",
+    "stock": 8,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1999738088",
+    "name": "Parlante Philco Djp15 Portátil Con Bluetooth Negro 220v 1500 W",
+    "description": "Nuevo",
+    "descripcion_corta": "Parlante Philco DJP15 con Bluetooth, 1500 W de potencia y diseño portátil.",
+    "descripcion_larga": "El parlante Philco DJP15 portátil ofrece 1500 W de potencia con Bluetooth para conectividad inalámbrica. Con su diseño compacto, es fácil de transportar y tiene una potencia de sonido impresionante para fiestas y eventos. Ideal para quienes buscan un sonido potente y claro en cualquier lugar.",
+    "features": [
+      "Bluetooth",
+      "1500 W de potencia",
+      "Diseño portátil",
+      "Sonido potente y claro"
+    ],
+    "price": 25900,
+    "image1": "http://http2.mlstatic.com/D_997000-MLU75908066032_042024-O.jpg",
+    "stock": 3,
+    "category": "Parlantes"
+  },
+  {
+    "id": "MLA1467824075",
+    "name": "Smart TV Samsung QLED QN55Q65CAGCZB 4K 55\" 220V/240V Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Smart TV Samsung QLED 55\" 4K con diseño elegante y tecnología avanzada.",
+    "descripcion_larga": "Disfruta de la mejor calidad de imagen con el Smart TV Samsung QLED QN55Q65CAGCZB de 55 pulgadas. Con resolución 4K y tecnología QLED, ofrece colores vibrantes y un contraste excepcional. Ideal para cine en casa, deportes y videojuegos. Además, cuenta con un sistema de Smart TV para acceder a tus aplicaciones favoritas como Netflix, YouTube y más.",
+    "features": [
+      "Pantalla QLED 55\"",
+      "Resolución 4K",
+      "Tecnología QLED para colores vibrantes",
+      "Sistema Smart TV con acceso a apps",
+      "Diseño elegante y delgado"
+    ],
+    "price": 1149999,
+    "image1": "https://http2.mlstatic.com/D_NQ_NP_2X_973901-MLA75572833193_042024-F.webp",
+    "stock": 10,
+    "category": "Televisores"
+  },
+  {
+    "id": "MLA1467824075",
+    "name": "Smart TV Samsung QLED QN55Q65CAGCZB 4K 55\" 220V/240V Negro",
+    "description": "Nuevo",
+    "descripcion_corta": "Smart TV Samsung QLED 55\" 4K con diseño elegante y tecnología avanzada.",
+    "descripcion_larga": "Disfruta de la mejor calidad de imagen con el Smart TV Samsung QLED QN55Q65CAGCZB de 55 pulgadas. Con resolución 4K y tecnología QLED, ofrece colores vibrantes y un contraste excepcional. Ideal para cine en casa, deportes y videojuegos. Además, cuenta con un sistema de Smart TV para acceder a tus aplicaciones favoritas como Netflix, YouTube y más.",
+    "features": [
+      "Pantalla QLED 55\"",
+      "Resolución 4K",
+      "Tecnología QLED para colores vibrantes",
+      "Sistema Smart TV con acceso a apps",
+      "Diseño elegante y delgado"
+    ],
+    "price": 79999,
+    "image1": "https://http2.mlstatic.com/D_NQ_NP_2X_973901-MLA75572833193_042024-F.webp",
+    "stock": 10,
+    "category": "Televisores"
+  }
+]

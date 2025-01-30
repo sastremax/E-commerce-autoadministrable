@@ -20,6 +20,7 @@ export default async function ProductoPage({ params }) {
         ? `${producto.name.split(" ").slice(0, 90).join(" ")} ...`
         : "Descripción no disponible";
 
+    console.log("ID del producto seleccionado:", producto.id);    
     return (
         <main className="flex-1 p-6">
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">

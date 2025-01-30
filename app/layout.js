@@ -28,6 +28,7 @@ export const metadata = {
                     width: 800,
                     height: 600,
                     alt: "Logo de LATAM PRODUCTS",
+                    priority: true,
                },
           ],
      },

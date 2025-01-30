@@ -1,12 +1,18 @@
-import { collection, doc, setDoc, getDocs, query, where } from "firebase/firestore";
-import { db } from "../utils/config.js";
-import { readFileSync } from "node:fs";
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "./utils/config.js";
+import { readFileSync, existsSync } from "node:fs";
 
-const products = JSON.parse(readFileSync("./products_fixed.json", "utf8"));
+const filePath = 'productos.json';
+if (!existsSync(filePath)) {
+    console.error(`El archivo no existe en la ruta: ${filePath}`);
+    process.exit(1);
+}
+
+const products = JSON.parse(readFileSync(filePath, "utf8"));
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const uploadOrUpdateProducts = async () => {
+const uploadProducts = async () => {
     try {
         const productsCollection = collection(db, "productos");
 
@@ -15,7 +21,7 @@ const uploadOrUpdateProducts = async () => {
 
             const docRef = doc(productsCollection, product.id);
 
-            await setDoc(docRef, product, { merge: true });
+            await setDoc(docRef, product);
             console.log(`Product "${product.name}" uploaded/updated successfully with ID "${product.id}".`);
 
             await delay(200);
@@ -26,5 +32,5 @@ const uploadOrUpdateProducts = async () => {
     }
 };
 
-uploadOrUpdateProducts();
+uploadProducts();
 
