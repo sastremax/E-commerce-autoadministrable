@@ -406,41 +406,5 @@
     "image1": "http://http2.mlstatic.com/D_997000-MLU75908066032_042024-O.jpg",
     "stock": 3,
     "category": "Parlantes"
-  },
-  {
-    "id": "MLA1467824075",
-    "name": "Smart TV Samsung QLED QN55Q65CAGCZB 4K 55\" 220V/240V Negro",
-    "description": "Nuevo",
-    "descripcion_corta": "Smart TV Samsung QLED 55\" 4K con diseño elegante y tecnología avanzada.",
-    "descripcion_larga": "Disfruta de la mejor calidad de imagen con el Smart TV Samsung QLED QN55Q65CAGCZB de 55 pulgadas. Con resolución 4K y tecnología QLED, ofrece colores vibrantes y un contraste excepcional. Ideal para cine en casa, deportes y videojuegos. Además, cuenta con un sistema de Smart TV para acceder a tus aplicaciones favoritas como Netflix, YouTube y más.",
-    "features": [
-      "Pantalla QLED 55\"",
-      "Resolución 4K",
-      "Tecnología QLED para colores vibrantes",
-      "Sistema Smart TV con acceso a apps",
-      "Diseño elegante y delgado"
-    ],
-    "price": 1149999,
-    "image1": "https://http2.mlstatic.com/D_NQ_NP_2X_973901-MLA75572833193_042024-F.webp",
-    "stock": 10,
-    "category": "Televisores"
-  },
-  {
-    "id": "MLA1467824075",
-    "name": "Smart TV Samsung QLED QN55Q65CAGCZB 4K 55\" 220V/240V Negro",
-    "description": "Nuevo",
-    "descripcion_corta": "Smart TV Samsung QLED 55\" 4K con diseño elegante y tecnología avanzada.",
-    "descripcion_larga": "Disfruta de la mejor calidad de imagen con el Smart TV Samsung QLED QN55Q65CAGCZB de 55 pulgadas. Con resolución 4K y tecnología QLED, ofrece colores vibrantes y un contraste excepcional. Ideal para cine en casa, deportes y videojuegos. Además, cuenta con un sistema de Smart TV para acceder a tus aplicaciones favoritas como Netflix, YouTube y más.",
-    "features": [
-      "Pantalla QLED 55\"",
-      "Resolución 4K",
-      "Tecnología QLED para colores vibrantes",
-      "Sistema Smart TV con acceso a apps",
-      "Diseño elegante y delgado"
-    ],
-    "price": 79999,
-    "image1": "https://http2.mlstatic.com/D_NQ_NP_2X_973901-MLA75572833193_042024-F.webp",
-    "stock": 10,
-    "category": "Televisores"
   }
 ]

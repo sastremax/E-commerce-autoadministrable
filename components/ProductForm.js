@@ -79,10 +79,13 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
             if (selectedAction === "add") {
                 await addDoc(collection(db, "productos"), productData);
                 Swal.fire("Producto creado", "El producto ha sido agregado exitosamente.", "success");
+                setSelectedAction("none");
             } else if (selectedAction === "edit" && productId) {
                 const productRef = doc(db, "productos", productId);
                 await updateDoc(productRef, productData);
                 Swal.fire("Producto editado", "El producto se actualizó correctamente.", "success");
+                wal.fire("Producto creado", "El producto ha sido agregado exitosamente.", "success");
+                setSelectedAction("none");
             } else if (selectedAction === "delete" && productId) {
                 const productRef = doc(db, "productos", productId);
                 await deleteDoc(productRef);
@@ -94,9 +97,6 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
         }
     };
 
-    const buttonText = selectedAction === "edit"
-        ? "Actualizar Producto"
-        : "Crear Producto";
 
     const renderFormContent = () => {
         if (selectedAction === "add") {
@@ -319,12 +319,27 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
             <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-100">
                 <div className="space-y-2 col-span-full lg:col-span-1">
                     <p className="font-medium">Información del Producto</p>
-                    <p className="text-xs">Complete los campos para agregar un producto.</p>
                 </div>
                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                    {renderFormContent()}                    
+                    {renderFormContent()}
                 </div>
             </fieldset>
+            <div className="col-span-full flex justify-between mt-4">
+                <button type="submit" className="bg-blue-500 text-white py-2 px-6 rounded">
+                    {selectedAction === "delete"
+                        ? "Eliminar Producto"
+                        : selectedAction === "edit"
+                            ? "Actualizar Producto"
+                            : "Crear Producto"}
+                </button>
+                <button
+                    type="button"
+                    className="bg-gray-500 text-white py-2 px-6 rounded"
+                    onClick={() => setSelectedAction("none")}
+                >
+                    Volver Atrás
+                </button>
+            </div>
         </form>
     );
 }

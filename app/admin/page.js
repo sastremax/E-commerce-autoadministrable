@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ProductForm from "@/components/ProductForm";
 import { db } from "@/utils/config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 const AdminPage = () => {
 
@@ -30,17 +31,23 @@ const AdminPage = () => {
         fetchProductos();
     }, []);
 
-    const buttonText =
-        selectedAction === "add" ? "Crear Producto" :
-            selectedAction === "edit" ? "Actualizar Producto" :
-                selectedAction === "delete" ? "Eliminar Producto" :
-                    "";
+    let buttonText = "";
+    if (selectedAction === "add") {
+        buttonText = "Crear Producto";
+    } else if (selectedAction === "edit") {
+        buttonText = "Actualizar Producto";
+    } else if (selectedAction === "delete") {
+        buttonText = "Eliminar Producto";
+    }
 
-    const sectionText =
-        selectedAction === "add" ? "Complete los campos para agregar un producto." :
-            selectedAction === "edit" ? "Modifica los campos para actualizar el producto." :
-                selectedAction === "delete" ? "Confirma si deseas eliminar este producto." :
-                    "";
+    let sectionText = "";
+    if (selectedAction === "add") {
+        sectionText = "Complete los campos para agregar un producto.";
+    } else if (selectedAction === "edit") {
+        sectionText = "Modifica los campos para actualizar el producto.";
+    } else if (selectedAction === "delete") {
+        sectionText = "Confirma si deseas eliminar este producto.";
+    }
 
     const handleDeleteProduct = async () => {
         if (productId) {
@@ -121,28 +128,7 @@ const AdminPage = () => {
                         </div>
                     )}
                 </div>
-            )}
-            <div className="mt-6">
-                <p className="font-medium">{sectionText}</p>
-                <button
-                    type="button"
-                    className="bg-blue-500 text-white py-2 px-6 rounded mt-4"
-                    onClick={() => {
-                        if (selectedAction === "delete" && productId) {
-                            handleDeleteProduct();
-                        }
-                    }}
-                >
-                    {buttonText}
-                </button>
-                <button
-                    type="button"
-                    className="bg-gray-500 text-white py-2 px-6 rounded"
-                    onClick={() => setSelectedAction("none")}
-                >
-                    Volver Atrás
-                </button>
-            </div>
+            )}            
         </section>
     );
 }
