@@ -35,6 +35,9 @@ function Header() {
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
                          </Link>
+                         <Link href="/admin" className="hover:text-gray-300">
+                              Admin
+                         </Link>
                          <Link href="/carrito" className="hover:text-gray-300">
                               <ShoppingCart className="h-6 w-6" />
                          </Link>

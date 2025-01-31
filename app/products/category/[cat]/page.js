@@ -9,6 +9,7 @@ export default async function ProductsByCategoryPage({ params }) {
     const decodedCategory = decodeURIComponent(cat);
 
     const productosRef = collection(db, "productos");
+    
     const q = query(productosRef, where("category", "==", decodedCategory));
 
     const querySnapshot = await getDocs(q);
