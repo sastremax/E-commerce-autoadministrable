@@ -23,18 +23,14 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
-                console.log("Usuario autenticado UID:", user.uid);
                 setLoggedIn(true);
                 setCurrentUser(user);
 
                 const userRef = doc(db, "user", user.uid);
                 const userDoc = await getDoc(userRef);
                 if (userDoc.exists()) {
-                    console.log("Documento Firestore:", userDoc.data());
                     setRole(userDoc.data().role);
-                    console.log("Rol del usuario:", userDoc.data().role);
                 } else {
-                    console.log("No se encontró el rol del usuario.");
                     setRole(null);
                 }
             } else {

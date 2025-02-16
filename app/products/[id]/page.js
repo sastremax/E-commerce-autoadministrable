@@ -24,7 +24,6 @@ export default function ProductoPage({ params }) {
                 setError(message);
                 notFound();
             } else {
-                console.log('Producto obtenido:', payload);
                 setProducto(payload);
             }
         };
@@ -50,55 +49,59 @@ export default function ProductoPage({ params }) {
                 <PageTitle>Detalle del producto {id}</PageTitle>
                 <h1 className="text-2xl font-bold mb-4">{producto.name}</h1>
                 <div className="flex flex-col md:flex-row">
-                    <img
-                        src={producto.image1 || "/images/placeholder.png"}
-                        alt={producto.name}
-                        className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-4"
-                    />
+                    <div className="flex-shrink-0 w-full md:w-1/2 mb-4 md:mb-0">
+                        <img
+                            src={producto.image1 || "/images/placeholder.png"}
+                            alt={producto.name}
+                            className="w-full h-auto object-cover rounded-lg"
+                        />
+                    </div>
                     <div className="md:w-1/2">
-                        <h2 className="text-lg font-semibold mb-2">Descripción</h2>
-                        <p className="text-gray-700 mb-4">{producto.descripcion_larga}</p>
-                        <p className="text-sm text-gray-500">Estado: {producto.description || "Desconocido"}</p>
-                        <div className="mb-4">
-                            <span className="text-xl font-bold text-blue-600">
-                                ${producto.price.toLocaleString()}
-                            </span>
-                            <p className="text-sm text-gray-600">
-                                Stock disponible: <strong>{producto.stock} unidades</strong>
-                            </p>
-                        </div>
-                        <div className="flex space-x-4">
-                            console.log(producto);
-                            {loggedIn ? (
-                                <AddToCartButton producto={producto} />
-                            ) : (
-                                <button
-                                    type="button"
-                                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                                    onClick={() =>
-                                        Swal.fire({
-                                            icon: "warning",
-                                            title: "¡Debes iniciar sesión!",
-                                            text: "Para agregar productos al carrito, necesitas estar logueado.",
-                                            confirmButtonText: "Iniciar sesión",
-                                            confirmButtonColor: "#3085d6",
-                                            preConfirm: () => {
-                                                window.location.href = "/iniciar-sesion";
-                                            },
-                                        })
-                                    }
+                        <div className="md:w-1/2">
+                            <h2 className="text-lg font-semibold mb-2">Descripción</h2>
+                            <p className="text-gray-700 mb-4">{producto.descripcion_larga}</p>
+                            <p className="text-sm text-gray-500">Estado: {producto.description || "Desconocido"}</p>
+                            <div className="mb-4">
+                                <span className="text-xl font-bold text-blue-600">
+                                    ${producto.price.toLocaleString()}
+                                </span>
+                                <p className="text-sm text-gray-600">
+                                    Stock disponible: <strong>{producto.stock} unidades</strong>
+                                </p>
+                            </div>
+                            <div className="flex space-x-4">
+                                {loggedIn ? (
+                                    <AddToCartButton producto={producto} />
+                                ) : (
+                                    <button
+                                        type="button"
+                                        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                                        onClick={() =>
+                                            Swal.fire({
+                                                icon: "warning",
+                                                title: "¡Debes iniciar sesión!",
+                                                text: "Para agregar productos al carrito, necesitas estar logueado.",
+                                                confirmButtonText: "Iniciar sesión",
+                                                confirmButtonColor: "#3085d6",
+                                                preConfirm: () => {
+                                                    window.location.href = "/iniciar-sesion";
+                                                },
+                                            })
+                                        }
+                                    >
+                                        Agregar al carrito
+                                    </button>
+                                )}
+                                <Link
+                                    href="/"
+                                    className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
                                 >
-                                    Agregar al carrito
-                                </button>
-                            )}
-                            <Link
-                                href="/"
-                                className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
-                            >
-                                Volver a Inicio
-                            </Link>
+                                    Volver a Inicio
+                                </Link>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </main>

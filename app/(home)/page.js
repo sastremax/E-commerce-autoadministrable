@@ -60,6 +60,7 @@ function HomePage() {
                          src="/images/portada.webp"
                          alt="Imagen de Portada"
                          className="w-full h-auto object-cover shadow-lg"
+                         style={{ width: '100%', height: 'auto' }}
                     />
                </div>
                <div className="flex bg-white text-black">

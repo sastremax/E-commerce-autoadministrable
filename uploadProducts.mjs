@@ -18,13 +18,11 @@ const uploadProducts = async () => {
     try {
         const productsCollection = collection(db, "productos");
 
-        for (const product of products) {
-            console.log("Processing product:", product);
+        for (const product of products) {            
 
             const docRef = doc(productsCollection, product.id);
 
-            await setDoc(docRef, product);
-            console.log(`Product "${product.name}" uploaded/updated successfully with ID "${product.id}".`);
+            await setDoc(docRef, product);            
 
             await delay(200);
         }

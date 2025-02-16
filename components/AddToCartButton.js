@@ -6,7 +6,6 @@ import { AuthContext } from "providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const AddToCartButton = ({ producto }) => {
-    console.log('Producto en AddToCartButton:', producto);
     const { addToCart } = useContext(CartContext);
     const { loggedIn } = useContext(AuthContext);
 

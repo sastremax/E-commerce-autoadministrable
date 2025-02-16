@@ -94,14 +94,14 @@ export default function CarritoPage() {
                               <Link href="/">
                                    <button
                                         type="button"
-                                        className="px-6 py-2 border rounded-md border-blue-600 text-blue-600 hover:bg-blue-50"
+                                        className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
                                    >
-                                        Volver a la tienda
+                                        Volver a Inicio
                                    </button>
                               </Link>
                               <button
                                    type="button"
-                                   className="px-6 py-2 border rounded-md bg-blue-300 text-white hover:bg-blue-700"
+                                        className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
                                    onClick={clearCart}
                               >
                                    Vaciar carrito
@@ -109,7 +109,7 @@ export default function CarritoPage() {
                               <Link href="/checkout">
                                    <Button
                                         type="button"
-                                        className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
+                                             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
                                    >
                                         Proceder al pago
                                    </Button>

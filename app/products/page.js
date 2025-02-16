@@ -58,8 +58,6 @@ export default async function ProductoPage({ params }) {
     const { id } = params;
 
     try {
-        console.log("Params:", params);
-
         const docRef = doc(db, "productos", id);
         const docSnap = await getDoc(docRef);
 
@@ -68,7 +66,6 @@ export default async function ProductoPage({ params }) {
         }
 
         const producto = docSnap.data();
-        console.log("Datos obtenidos del producto:", producto);
 
         return (
             <main className="flex-1 p-6">

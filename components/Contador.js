@@ -7,7 +7,6 @@ const Contador = () => {
     const [count, setCount] = useState(0);
 
     const incrementarContador = () => {
-        console.log("Contador actual:", count);
         setCount(count + 1);
     }
     const decrementarContador = () => {

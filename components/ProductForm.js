@@ -25,7 +25,6 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                     ...doc.data(),
                 }));
                 setProductos(productosData);
-                console.log("Productos cargados:", productosData);
             } catch (error) {
                 console.error("Error fetching products: ", error);
             }
@@ -34,7 +33,6 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
     }, []);
 
     useEffect(() => {
-        console.log("useEffect triggered, selectedAction:", selectedAction, "productoId:", productoId);
         const fetchProductData = async () => {
             if (selectedAction === "edit" && productoId) {
                 try {
@@ -42,7 +40,6 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
                         const producto = docSnap.data();
-                        console.log("Producto encontrado:", producto);
                         setName(producto.name);
                         setPrice(producto.price);
                         setCategory(producto.category);
@@ -208,7 +205,6 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                             className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-blue-600 border-gray-300"
                             value={productoId || ""}
                             onChange={(e) => {
-                                console.log("Producto seleccionado:", e.target.value);
                                 setProductId(e.target.value)
                             }}
                         >
@@ -229,7 +225,6 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                                     type="text"
                                     value={name}
                                     onChange={(e) => {
-                                        console.log("Nombre actualizado:", e.target.value);
                                         setName(e.target.value)
                                     }}
                                     className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-blue-600 border-gray-300"

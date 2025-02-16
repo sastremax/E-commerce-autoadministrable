@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import Button from "@/components/Button";
-import { collection, addDoc } from "firebase/firestore";
+import { useState, useContext } from "react";
+import { collection, addDoc, doc, updateDoc, getDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { db } from "@/utils/config";
+import { CartContext } from "../../providers/CartContext";
 
 const CheckoutPage = () => {
+    const { cartItems } = useContext(CartContext);
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -26,14 +27,43 @@ const CheckoutPage = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault();        
+
+        for (const item of cartItems) {
+            const productRef = doc(db, "productos", item.id);
+            const productSnapshot = await getDoc(productRef);
+            const productData = productSnapshot.data();
+
+            if (productData.stock < item.quantity) {
+                Swal.fire({
+                    title: "Stock insuficiente",
+                    text: `No hay suficiente stock para el producto ${item.name}. Reduzca la cantidad o elimínelo del carrito.`,
+                    icon: "error",
+                    confirmButtonText: "Cerrar",
+                });
+                return;
+            }
+        }
 
         try {
             await addDoc(collection(db, "orders"), {
                 ...formData,
                 status: "Pending",
                 date: new Date(),
+                products: cartItems.map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    price: item.price,
+                    quantity: item.quantity,
+                }))
             });
+
+            for (const item of cartItems) {
+                const productRef = doc(db, "productos", item.id);
+                const newStock = item.stock - item.quantity;
+                await updateDoc(productRef, { stock: newStock });
+            }
+
             Swal.fire({
                 title: "Compra realizada con éxito",
                 text: "Tu pedido ha sido procesado.",
@@ -48,11 +78,11 @@ const CheckoutPage = () => {
                 icon: "error",
                 confirmButtonText: "Cerrar",
             });
-        }   
+        }
     };
 
     return (
-        <div className="p-6 max-w-3xl mx-auto bg-white rounded-lg shadow-md">
+        <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold">Formulario de Checkout</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -126,7 +156,6 @@ const CheckoutPage = () => {
                         className="w-full border border-gray-300 p-2 rounded"
                     />
                 </div>
-
                 <div>
                     <label htmlFor="zip">Código Postal</label>
                     <input
@@ -138,12 +167,14 @@ const CheckoutPage = () => {
                         className="w-full border border-gray-300 p-2 rounded"
                     />
                 </div>
-
-                <Button 
-                    type="submit" 
-                    label="Confirmar Compra"
-                    className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
-                />
+                <div className="flex justify-center">
+                    <button
+                        type="submit"
+                        className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300 text-center "
+                    >
+                        Pagar
+                    </button>
+                </div>
             </form>
         </div>
     );
