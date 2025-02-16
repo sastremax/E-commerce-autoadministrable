@@ -5,7 +5,7 @@ function Footer() {
           <footer className="footer">
                <p>
                     &copy; 2024 Productos Latam, propiedad de Maximiliano
-                    Sastre. Todos los derechos reservados.
+                    Sastre Bocalon. Todos los derechos reservados.
                </p>
                <div className="redes flex justify-center space-x-4 mt-4">
                     <a

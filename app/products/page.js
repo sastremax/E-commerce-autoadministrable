@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageTitle from "@/components/PageTitle";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../../utils/config";
+import { db } from "../../utils/config.js";
 import Swal from "sweetalert2";
 
 export async function generateMetadata({ params }) {
