@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import { AuthContext } from "providers/AuthProvider";
 import Swal from "sweetalert2";
+import Button from "@/components/Button";
 
 const AddToCartButton = ({ producto }) => {
     const { addToCart } = useContext(CartContext);
@@ -36,13 +37,13 @@ const AddToCartButton = ({ producto }) => {
     };
 
     return (
-        <button
+        <Button
             onClick={handleAddToCart}
             type="button"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
         >
             Agregar al carrito
-        </button>
+        </Button>
     );
 };
 

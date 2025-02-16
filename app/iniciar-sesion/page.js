@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "@/providers/AuthProvider";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Button from "@/components/Button";
 
 function IniciarSesionPage() {
     const { signIn, handleGoogleLogin } = useContext(AuthContext);
@@ -44,7 +45,7 @@ function IniciarSesionPage() {
                     </Link>
                 </p>
                 <div className="my-6 space-y-4">
-                    <button
+                    <Button
                         aria-label="Loguear con Google"
                         type="button"
                         onClick={handleGoogleSignIn}
@@ -52,7 +53,7 @@ function IniciarSesionPage() {
 
                     >
                         <p>Loguear con Google</p>
-                    </button>
+                    </Button>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="space-y-4">
@@ -84,12 +85,12 @@ function IniciarSesionPage() {
                         </div>
                     </div>
                     {error && <p className="text-red-500 text-center">{error}</p>}
-                    <button
+                    <Button
                         type="submit"
                         className="w-full px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50"
                     >
                         Iniciar sesión
-                    </button>
+                    </Button>
                 </form>
             </div>
         </div>

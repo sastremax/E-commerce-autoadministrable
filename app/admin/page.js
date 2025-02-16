@@ -7,6 +7,7 @@ import { db } from "@/utils/config";
 import { collection, getDocs } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { AuthContext } from "@/providers/AuthProvider";
+import Button from "@/components/Button";
 
 const AdminPage = () => {
 
@@ -83,33 +84,33 @@ const AdminPage = () => {
         <section className="p-6 bg-gray-100 text-gray-900">
             {selectedAction === "none" && (
                 <div className="flex flex-col items-center space-y-4">
-                    <button
+                    <Button
                         type="button"
                         className="bg-blue-500 text-white py-2 px-6 rounded mb-4"
                         onClick={() => setSelectedAction("add")}
                     >
                         Agregar Producto Nuevo
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                         type="button"
                         className="bg-yellow-500 text-white py-2 px-6 rounded mb-4"
                         onClick={() => setSelectedAction("edit")}
                     >
                         Editar Producto
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                         type="button"
                         className="bg-red-500 text-white py-2 px-6 rounded mb-4"
                         onClick={() => setSelectedAction("delete")}
                     >
                         Eliminar Producto
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                         type="button"
                         className="bg-gray-600 text-white py-2 px-6 rounded mb-4"
                         onClick={() => router.push("/")}>
                         Salir
-                    </button>
+                    </Button>
                 </div>
             )}
             {selectedAction !== "none" && (

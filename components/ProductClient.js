@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
+import Button from "@/components/Button";
 
 export default function ProductClient({ producto }) {
     const { addToCart } = useContext(CartContext);
@@ -33,13 +34,13 @@ export default function ProductClient({ producto }) {
                     </p>
                 </div>
                 <div className="flex space-x-4">
-                    <button
+                    <Button
                         type="button"
                         className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
                         onClick={() => addToCart(producto)}
                     >
                         Agregar al carrito
-                    </button>
+                    </Button>
                     <a
                         href="/"
                         className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"

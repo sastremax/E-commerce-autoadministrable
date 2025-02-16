@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { db } from "@/utils/config";
 import { doc, addDoc, updateDoc, getDocs, getDoc, deleteDoc, collection } from "firebase/firestore";
-
+import Button from "@/components/Button";
 
 const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
     const [name, setName] = useState("");
@@ -319,20 +319,20 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                 </div>
             </fieldset>
             <div className="col-span-full flex justify-between mt-4">
-                <button type="submit" className="bg-blue-500 text-white py-2 px-6 rounded">
+                <Button type="submit" className="bg-blue-500 text-white py-2 px-6 rounded">
                     {selectedAction === "delete"
                         ? "Eliminar Producto"
                         : selectedAction === "edit"
                             ? "Actualizar Producto"
                             : "Crear Producto"}
-                </button>
-                <button
+                </Button>
+                <Button
                     type="button"
                     className="bg-gray-500 text-white py-2 px-6 rounded"
                     onClick={() => setSelectedAction("none")}
                 >
                     Volver Atrás
-                </button>
+                </Button>
             </div>
         </form>
     );

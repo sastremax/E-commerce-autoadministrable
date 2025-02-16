@@ -5,6 +5,7 @@ import { collection, addDoc, doc, updateDoc, getDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { db } from "@/utils/config";
 import { CartContext } from "../../providers/CartContext";
+import Button from "@/components/Button";
 
 const CheckoutPage = () => {
     const { cartItems } = useContext(CartContext);
@@ -168,12 +169,12 @@ const CheckoutPage = () => {
                     />
                 </div>
                 <div className="flex justify-center">
-                    <button
+                    <Button
                         type="submit"
                         className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300 text-center "
                     >
                         Pagar
-                    </button>
+                    </Button>
                 </div>
             </form>
         </div>

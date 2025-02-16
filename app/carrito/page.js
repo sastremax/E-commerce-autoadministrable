@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import Link from "next/link";
 import { AuthContext } from "providers/AuthProvider";
-import Button from "../../components/Button";
+import Button from "@/components/Button";
 
 export default function CarritoPage() {
      const { loggedIn } = useContext(AuthContext);
@@ -92,24 +92,24 @@ export default function CarritoPage() {
                          </div>
                          <div className="flex justify-end space-x-4">
                               <Link href="/">
-                                   <button
+                                   <Button
                                         type="button"
                                         className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"
                                    >
                                         Volver a Inicio
-                                   </button>
+                                   </Button>
                               </Link>
-                              <button
+                              <Button
                                    type="button"
-                                        className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
+                                   className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600"
                                    onClick={clearCart}
                               >
                                    Vaciar carrito
-                              </button>
+                              </Button>
                               <Link href="/checkout">
                                    <Button
                                         type="button"
-                                             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
+                                        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
                                    >
                                         Proceder al pago
                                    </Button>

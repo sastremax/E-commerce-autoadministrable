@@ -5,9 +5,7 @@ import Link from "next/link";
 import { AuthContext } from "@/providers/AuthProvider";
 import { useContext, useState } from "react";
 import { ShoppingCart } from "lucide-react";
-import Button from "./Button";
-
-
+import Button from "@/components/Button";
 
 function Header() {
      const { loggedIn: user, handleLogout: signOutUser } = useContext(AuthContext);
@@ -60,7 +58,7 @@ function Header() {
                               </Button>
                          </Link>
                     )}
-                    <button
+                    <Button
                          type="button"
                          className="block md:hidden text-black focus:outline-none"
                          aria-label="Abrir menú"
@@ -81,7 +79,7 @@ function Header() {
                                    d="M4 6h16M4 12h16M4 18h16"
                               />
                          </svg>
-                    </button>
+                    </Button>
                </div>
           </header>
      );
