@@ -8,12 +8,12 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
-    const addToCart = useCallback((product) => {
+    const addToCart = useCallback((producto) => {
         setCartItems((prevItems) => {
-            const existingProduct = prevItems.find((item) => item.id === product.id);
+            const existingProduct = prevItems.find((item) => item.id === producto.id);
             if (existingProduct) {
 
-                if (existingProduct.quantity >= product.stock) {
+                if (existingProduct.quantity >= producto.stock) {
                     Swal.fire({
                         title: "Stock insuficiente",
                         text: "No puedes agregar más productos. No hay stock",
@@ -26,13 +26,13 @@ const CartProvider = ({ children }) => {
                     return prevItems;
                 }
                 return prevItems.map((item) =>
-                    item.id === product.id
+                    item.id === producto.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 );
             }
 
-            if (product.stock === 0) {
+            if (producto.stock === 0) {
                 Swal.fire({
                     title: "Producto agotado",
                     text: "No hay stock",
@@ -47,7 +47,7 @@ const CartProvider = ({ children }) => {
 
             Swal.fire({
                 title: "Producto agregado",
-                text: `"${product.name}" fue añadido al carrito.`,
+                text: `"${producto.name}" fue añadido al carrito.`,
                 icon: "success",
                 toast: true,
                 position: "top-end",
@@ -55,13 +55,13 @@ const CartProvider = ({ children }) => {
                 timer: 2000
             });
 
-            return [...prevItems, { ...product, quantity: 1 }];
+            return [...prevItems, { ...producto, quantity: 1 }];
         });
     }, []);
 
-    const removeFromCart = useCallback((productId) => {
+    const removeFromCart = useCallback((productoId) => {
         setCartItems((prevItems) =>
-            prevItems.filter((item) => item.id !== productId)
+            prevItems.filter((item) => item.id !== productoId)
         );
         Swal.fire({
             title: "Producto eliminado",
@@ -87,10 +87,10 @@ const CartProvider = ({ children }) => {
         });
     }, []);
 
-    const decreaseQuantity = useCallback((productId) => {
+    const decreaseQuantity = useCallback((productoId) => {
         setCartItems((prevItems) => {
             return prevItems.map((item) => {
-                if (item.id === productId) {
+                if (item.id === productoId) {
                     if (item.quantity > 1) {
                         return { ...item, quantity: item.quantity - 1 };
                     }

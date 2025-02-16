@@ -3,8 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import ProductsLoader from "./ProductsLoader";
+import { useContext } from "react";
+import { AuthContext } from "providers/AuthProvider";
 
 function ProductList({ productos, isLoading }) {
+
+    const { loggedIn } = useContext(AuthContext);
 
     if (isLoading) {
         return <ProductsLoader />;
@@ -22,12 +26,12 @@ function ProductList({ productos, isLoading }) {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {productosUnicos.map((producto) => (
                 <Link
                     key={producto.id}
-                    href={`/products/details/${producto.id}`}
-                    className="p-4 border rounded-lg shadow hover:shadow-lg hover:scale-105 bg-white cursor-pointer transition-transform duration-200"
+                    href={`/products/${producto.id}`}
+                    className="max-w-xs w-full min-h-[300px] flex flex-col justify-between p-4 border rounded-lg shadow hover:shadow-lg hover:scale-105 bg-white cursor-pointer transition-transform duration-200"
                     aria-label={`Ver detalles del producto: ${producto.name}`}
                 >
                     <div className="h-full flex flex-col">
@@ -35,16 +39,12 @@ function ProductList({ productos, isLoading }) {
                             <Image
                                 src={producto.image1 || "../public/images/image-not-avaible.webp"}
                                 alt={producto.name || "Producto sin nombre"}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                style={{ objectFit: "contain" }}
-                                className="rounded-lg"
+                                width={150}
+                                height={150}
+                                className="rounded-lg object-contain max-h-40 mx-auto"
                             />
                         </div>
-                        <h2 className="text-lg font-semibold mb-2">{producto.name}</h2>
-                        <p className="text-sm text-gray-700 mb-2">
-                            {producto.description || "Sin descripción disponible"}
-                        </p>
+                        <h2 className="text-sm md:text-base lg:text-lg font-semibold mb-2">{producto.name.split(" ").slice(0, 4).join(" ")}...</h2>
                         <p className="text-xs text-gray-500">Estado: {producto.description || "Desconocido"}</p>
                         <div className="mt-auto">
                             <span className="text-blue-600 font-bold">

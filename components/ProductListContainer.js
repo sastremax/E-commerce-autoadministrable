@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import PageTitle from "@/components/PageTitle";
 
 export default async function ProductListContainer() {
-    const { payload: products, error, message } = await getProducts();
+    const { payload: productos, error, message } = await getProducts();
 
     if (error) {
         return (
@@ -14,5 +14,5 @@ export default async function ProductListContainer() {
         );
     }
 
-    return <ProductList productos={products} />;
+    return <ProductList productos={productos} />;
 }

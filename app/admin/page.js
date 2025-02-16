@@ -1,18 +1,38 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/navigation";
 import ProductForm from "@/components/ProductForm";
 import { db } from "@/utils/config";
-import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import Swal from "sweetalert2";
+import { AuthContext } from "@/providers/AuthProvider";
 
 const AdminPage = () => {
 
+    const { loggedIn, role } = useContext(AuthContext);
     const router = useRouter();
     const [selectedAction, setSelectedAction] = useState("none");
     const [productId, setProductId] = useState(null);
     const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if (loggedIn && role !== null) {
+            if (role !== "admin") {
+                Swal.fire({
+                    title: "Acceso Denegado",
+                    text: "No tienes permisos para acceder a esta página.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                }).then(() => {
+                    router.push("/");
+                });
+            } else {
+                setLoading(false);
+            }
+        }
+    }, [loggedIn, role, router]);
 
     useEffect(() => {
         const fetchProductos = async () => {
@@ -49,23 +69,15 @@ const AdminPage = () => {
         sectionText = "Confirma si deseas eliminar este producto.";
     }
 
-    const handleDeleteProduct = async () => {
-        if (productId) {
-            try {
-                const productRef = doc(db, "productos", productId);
-                await deleteDoc(productRef);
-                Swal.fire("Producto Eliminado", "El producto fue eliminado", "success");
 
-                setProductos(productos.filter(producto => producto.id !== productId));
-                setProductId(null);
-                setSelectedAction("none");
 
-            } catch (error) {
-                console.error("Error deleting product: ", error);
-                Swal.fire("Error", "Hubo un problema al eliminar el producto.", "error");
-            }
-        }
-    };
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center text-center mt-10">
+                <p className="text-lg text-red-500">Verificando Acceso...</p>
+            </div>
+        );
+    }
 
     return (
         <section className="p-6 bg-gray-100 text-gray-900">
@@ -128,7 +140,7 @@ const AdminPage = () => {
                         </div>
                     )}
                 </div>
-            )}            
+            )}
         </section>
     );
 }

@@ -13,11 +13,7 @@ export async function generateMetadata({ params }) {
         const docSnap = await getDoc(docRef);
 
         if (!docSnap.exists()) {
-            return {
-                title: "Producto no encontrado - LATAM PRODUCTS",
-                description: "El producto que buscas no existe o ya no está disponible.",
-                robots: "noindex, nofollow",
-            };
+            notFound();
         }
 
         const producto = docSnap.data();
@@ -26,7 +22,7 @@ export async function generateMetadata({ params }) {
             title: `${producto.name} - LATAM PRODUCTS`,
             authors: [{ name: "Maximiliano Sastre" }],
             metadataBase: new URL("http://localhost:3000"),
-            description: producto.description || "Detalles de este producto único.",
+            description: producto.descripcion_larga || "Detalles de este producto único.",
             keywords: [
                 producto.name,
                 "productos electrónicos",
@@ -36,7 +32,7 @@ export async function generateMetadata({ params }) {
             robots: "index, follow",
             openGraph: {
                 title: `${producto.name} - LATAM PRODUCTS`,
-                description: producto.description || "Detalles de este producto único.",
+                description: producto.descripcion_larga || "Detalles de este producto único.",
                 images: [
                     {
                         url: producto.image1 || "/images/default-product.webp",
@@ -57,11 +53,6 @@ export async function generateMetadata({ params }) {
     }
 }
 
-function limitarPalabras(texto, limite) {
-    const palabras = texto.split(" ");
-    return palabras.length > limite ? `${palabras.slice(0, limite).join(" ")} ...` : texto;
-};
-
 export default async function ProductoPage({ params }) {
 
     const { id } = params;
@@ -77,12 +68,7 @@ export default async function ProductoPage({ params }) {
         }
 
         const producto = docSnap.data();
-
-        const limitarPalabras = (texto, limite) => {
-            const palabras = texto.split(" ");
-            return palabras.length > limite ? `${palabras.slice(0, limite).join(" ")} ...` : texto;
-        };
-        const descripcionCorta = limitarPalabras(producto.description || "Descripción no disponible", 90);
+        console.log("Datos obtenidos del producto:", producto);
 
         return (
             <main className="flex-1 p-6">
@@ -91,13 +77,13 @@ export default async function ProductoPage({ params }) {
                     <h1 className="text-2xl font-bold mb-4">{producto.name}</h1>
                     <div className="flex flex-col md:flex-row">
                         <img
-                            src={producto.image1}
+                            src={producto.image1 || "/images/placeholder.png"}
                             alt={producto.name}
                             className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0 md:mr-4"
                         />
                         <div className="md:w-1/2">
                             <h2 className="text-lg font-semibold mb-2">Descripción</h2>
-                            <p className="text-gray-700 mb-4">{descripcionCorta}</p>
+                            <p className="text-gray-700 mb-4">{producto.descripcion_larga || "Descripción no disponible"}</p>
                             <div className="mb-4">
                                 <span className="text-xl font-bold text-blue-600">
                                     ${producto.price.toLocaleString()}

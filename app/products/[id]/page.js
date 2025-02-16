@@ -1,26 +1,49 @@
-import { db } from "@/utils/config";
-import { doc, getDoc } from "firebase/firestore";
-import { notFound } from "next/navigation";
+"use client";
+
+import React, { useState, useEffect, useContext } from "react";
 import PageTitle from "@/components/PageTitle";
 import Link from "next/link";
+import { getProductByIdFromServer } from "../../actions/getProductById";
+import { AuthContext } from "@/providers/AuthProvider";
+import AddToCartButton from "@/components/AddToCartButton";
+import Swal from "sweetalert2";
+import { notFound } from "next/navigation";
 
-export default async function ProductoPage({ params }) {
-    const { id } = params;
+export default function ProductoPage({ params }) {
+    const { id } = React.use(params);
 
-    const docRef = doc(db, "productos", id);
-    const docSnap = await getDoc(docRef);
+    const [producto, setProducto] = useState(null);
+    const [error, setError] = useState(null);
 
-    if (!docSnap.exists()) {
-        notFound();
+    const { loggedIn } = useContext(AuthContext);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const { payload, error, message } = await getProductByIdFromServer(id);
+            if (error) {
+                setError(message);
+                notFound();
+            } else {
+                console.log('Producto obtenido:', payload);
+                setProducto(payload);
+            }
+        };
+
+        fetchProduct();
+    }, [id]);
+    if (error) {
+        return (
+            <div>
+                <PageTitle>Producto no encontrado</PageTitle>
+                <p>{error}</p>
+            </div>
+        );
     }
 
-    const producto = docSnap.data();
+    if (!producto) {
+        return <p>Cargando...</p>;
+    }
 
-    const descripcionCorta = producto.name && typeof producto.name === "string"
-        ? `${producto.name.split(" ").slice(0, 90).join(" ")} ...`
-        : "Descripción no disponible";
-
-    console.log("ID del producto seleccionado:", producto.id);    
     return (
         <main className="flex-1 p-6">
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
@@ -34,7 +57,7 @@ export default async function ProductoPage({ params }) {
                     />
                     <div className="md:w-1/2">
                         <h2 className="text-lg font-semibold mb-2">Descripción</h2>
-                        <p className="text-gray-700 mb-4">{descripcionCorta}</p>
+                        <p className="text-gray-700 mb-4">{producto.descripcion_larga}</p>
                         <p className="text-sm text-gray-500">Estado: {producto.description || "Desconocido"}</p>
                         <div className="mb-4">
                             <span className="text-xl font-bold text-blue-600">
@@ -45,12 +68,29 @@ export default async function ProductoPage({ params }) {
                             </p>
                         </div>
                         <div className="flex space-x-4">
-                            <button
-                                type="button"
-                                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                            >
-                                Agregar al carrito
-                            </button>
+                            console.log(producto);
+                            {loggedIn ? (
+                                <AddToCartButton producto={producto} />
+                            ) : (
+                                <button
+                                    type="button"
+                                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                                    onClick={() =>
+                                        Swal.fire({
+                                            icon: "warning",
+                                            title: "¡Debes iniciar sesión!",
+                                            text: "Para agregar productos al carrito, necesitas estar logueado.",
+                                            confirmButtonText: "Iniciar sesión",
+                                            confirmButtonColor: "#3085d6",
+                                            preConfirm: () => {
+                                                window.location.href = "/iniciar-sesion";
+                                            },
+                                        })
+                                    }
+                                >
+                                    Agregar al carrito
+                                </button>
+                            )}
                             <Link
                                 href="/"
                                 className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300"

@@ -10,13 +10,13 @@ export async function getProducts(category) {
             : productosCollection;
 
         const querySnapshot = await getDocs(productosQuery);
-        const products = querySnapshot.docs.map((doc) => ({
+        const productos = querySnapshot.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
         }));
 
         return {
-            payload: products,
+            payload: productos,
             error: false,
             message: null,
         };
@@ -27,4 +27,6 @@ export async function getProducts(category) {
             message: "Hubo un problema al obtener los productos.",
         };
     }
+
+    
 }

@@ -3,11 +3,12 @@
 import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import Link from "next/link";
+import { AuthContext } from "providers/AuthProvider";
 
 export default function CarritoPage() {
+     const { loggedIn } = useContext(AuthContext);
      const { cartItems, addToCart, decreaseQuantity, removeFromCart, clearCart } = useContext(CartContext);
 
-     const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
      const IVA_RATE = 0.21;
      const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
      const iva = subtotal * IVA_RATE;
@@ -106,6 +107,19 @@ export default function CarritoPage() {
                               </button>
                          </div>
                     </>
+               )}
+               {!loggedIn && (
+                    <div className="text-center mt-4">
+                         <p>Para agregar productos al carrito, debes iniciar sesión.</p>
+                         <Link href="/iniciar-sesion">
+                              <button
+                                   className="px-6 py-2 border rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                                   type="button"
+                              >
+                                   Iniciar sesión
+                              </button>
+                         </Link>
+                    </div>
                )}
           </div>
      );

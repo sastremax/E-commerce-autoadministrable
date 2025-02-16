@@ -4,7 +4,7 @@ import { db } from "@/utils/config";
 import { doc, addDoc, updateDoc, getDocs, getDoc, deleteDoc, collection } from "firebase/firestore";
 
 
-const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
+const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [category, setCategory] = useState("");
@@ -34,24 +34,24 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
     }, []);
 
     useEffect(() => {
-        console.log("useEffect triggered, selectedAction:", selectedAction, "productId:", productId);
+        console.log("useEffect triggered, selectedAction:", selectedAction, "productoId:", productoId);
         const fetchProductData = async () => {
-            if (selectedAction === "edit" && productId) {
+            if (selectedAction === "edit" && productoId) {
                 try {
-                    const docRef = doc(db, "productos", productId);
+                    const docRef = doc(db, "productos", productoId);
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
-                        const product = docSnap.data();
-                        console.log("Producto encontrado:", product);
-                        setName(product.name);
-                        setPrice(product.price);
-                        setCategory(product.category);
-                        setShortDescription(product.descripcion_corta);
-                        setLongDescription(product.descripcion_larga);
-                        setFeatures(product.features || []);
-                        setStock(product.stock);
-                        setImage(product.image1);
-                        setDescription(product.description || "Nuevo");
+                        const producto = docSnap.data();
+                        console.log("Producto encontrado:", producto);
+                        setName(producto.name);
+                        setPrice(producto.price);
+                        setCategory(producto.category);
+                        setShortDescription(producto.descripcion_corta);
+                        setLongDescription(producto.descripcion_larga);
+                        setFeatures(producto.features || []);
+                        setStock(producto.stock);
+                        setImage(producto.image1);
+                        setDescription(producto.description || "Nuevo");
                     }
                 } catch (error) {
                     console.error("Error fetching product data:", error);
@@ -59,11 +59,11 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
             }
         };
         fetchProductData();
-    }, [selectedAction, productId]);
+    }, [selectedAction, productoId]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const productData = {
+        const productoData = {
             name,
             price,
             category,
@@ -74,25 +74,24 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
             image1: image,
             description,
         };
-
         try {
             if (selectedAction === "add") {
-                await addDoc(collection(db, "productos"), productData);
+                await addDoc(collection(db, "productos"), productoData);
                 Swal.fire("Producto creado", "El producto ha sido agregado exitosamente.", "success");
                 setSelectedAction("none");
-            } else if (selectedAction === "edit" && productId) {
-                const productRef = doc(db, "productos", productId);
-                await updateDoc(productRef, productData);
+            } else if (selectedAction === "edit" && productoId) {
+                const productRef = doc(db, "productos", productoId);
+                await updateDoc(productRef, productoData);
                 Swal.fire("Producto editado", "El producto se actualizó correctamente.", "success");
-                wal.fire("Producto creado", "El producto ha sido agregado exitosamente.", "success");
                 setSelectedAction("none");
-            } else if (selectedAction === "delete" && productId) {
-                const productRef = doc(db, "productos", productId);
+            } else if (selectedAction === "delete" && productoId) {
+                const productRef = doc(db, "productos", productoId);
                 await deleteDoc(productRef);
                 Swal.fire("Producto eliminado", "El producto ha sido eliminado correctamente.", "success");
                 setSelectedAction("none");
             }
         } catch (error) {
+            console.error("Error al actualizar el producto:", error);
             Swal.fire("Error", "Hubo un problema", "error");
         }
     };
@@ -207,7 +206,7 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
                         <select
                             id="productSelect"
                             className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-blue-600 border-gray-300"
-                            value={productId || ""}
+                            value={productoId || ""}
                             onChange={(e) => {
                                 console.log("Producto seleccionado:", e.target.value);
                                 setProductId(e.target.value)
@@ -221,7 +220,7 @@ const ProductForm = ({ selectedAction, productId, setSelectedAction }) => {
                             ))}
                         </select>
                     </div>
-                    {productId && (
+                    {productoId && (
                         <>
                             <div className="col-span-full sm:col-span-3 mb-4">
                                 <label htmlFor="name" className="text-sm">Nombre del producto</label>
