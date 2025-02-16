@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AuthContext } from "@/providers/AuthProvider";
 import { useContext, useState } from "react";
 import { ShoppingCart } from "lucide-react";
-import Button from "../components/Button";
+import Button from "./Button";
 
 
 
