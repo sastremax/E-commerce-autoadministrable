@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import Link from "next/link";
 import { AuthContext } from "providers/AuthProvider";
+import Button from "@/components/Button";
 
 export default function CarritoPage() {
      const { loggedIn } = useContext(AuthContext);
@@ -100,11 +101,19 @@ export default function CarritoPage() {
                               </Link>
                               <button
                                    type="button"
-                                   className="px-6 py-2 border rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                                   className="px-6 py-2 border rounded-md bg-blue-300 text-white hover:bg-blue-700"
                                    onClick={clearCart}
                               >
                                    Vaciar carrito
                               </button>
+                              <Link href="/checkout">
+                                   <Button
+                                        type="button"
+                                        className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300"
+                                   >
+                                        Proceder al pago
+                                   </Button>
+                              </Link>
                          </div>
                     </>
                )}
