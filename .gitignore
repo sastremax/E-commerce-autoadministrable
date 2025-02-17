@@ -58,3 +58,6 @@ products_fixed.json
 .vscode/
 .idea/
 *.log
+
+# Gitignore
+.gitignore
