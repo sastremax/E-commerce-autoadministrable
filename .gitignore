@@ -61,3 +61,5 @@ products_fixed.json
 
 # Gitignore
 .gitignore
+
+.vercel/
