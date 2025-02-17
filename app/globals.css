@@ -15,39 +15,3 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
-
-h1 {
-  color: blue;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-#menu {
-  transition: max-height 0.4s ease-in-out;
-}
-
-.footer {
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.footer .redes a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer .redes a:hover {
-  color: #f39c12;
-}

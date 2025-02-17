@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const NotFoundPage = () => {
     return (
         <div style={{ textAlign: "center", padding: "10px" }}>

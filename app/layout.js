@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import AuthProvider from "@/providers/AuthProvider";
 import CartProvider from "@/providers/CartContext";
-import { Metadata } from "next";
 
 export const metadata = {
      title: "LATAM PRODUCTS - Bienvenidos",

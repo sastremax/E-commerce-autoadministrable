@@ -13,7 +13,7 @@ function Header() {
 
      return (
           <header className="bg-[var(--background)] text-black py-4 shadow-md">
-               <div className="container mx-auto flex justify-between items-center">
+               <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 flex-wrap">
                     <div className="flex items-center">
                          <Image
                               src="/images/logolatam.webp"
@@ -28,7 +28,7 @@ function Header() {
                          </span>
                     </div>
                     <nav
-                         className={`${menuOpen ? "block" : "hidden"} md:flex space-x-4`}
+                         className={`${menuOpen ? "block" : "hidden"} md:flex space-x-4 space-y-4 md:space-y-0 md:flex-row`}
                     >
                          <Link href="/" className="hover:text-gray-300">
                               Inicio
@@ -42,7 +42,7 @@ function Header() {
                     </nav>
                     {user ? (
                          <Button
-                              className="hidden md:block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
+                              className="hidden md:block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 w-full"
                               type="button"
                               onClick={signOutUser}
                          >
