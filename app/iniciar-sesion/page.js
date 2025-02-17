@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "@/providers/AuthProvider";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Button from "@/components/Button";
+import Button from "../../components/Button";
 
 function IniciarSesionPage() {
     const { signIn, handleGoogleLogin } = useContext(AuthContext);

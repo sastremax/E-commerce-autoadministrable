@@ -5,7 +5,7 @@ import PageTitle from "@/components/PageTitle";
 import Link from "next/link";
 import { getProductByIdFromServer } from "../../actions/getProductById";
 import { AuthContext } from "@/providers/AuthProvider";
-import AddToCartButton from "@/components/AddToCartButton";
+import AddToCartButton from "../../../components/AddToCartButton";
 import Swal from "sweetalert2";
 import { notFound } from "next/navigation";
 

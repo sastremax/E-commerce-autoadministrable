@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import Link from "next/link";
 import { AuthContext } from "providers/AuthProvider";
-import Button from "@/components/Button";
+import Button from "../../components/Button";
 
 export default function CarritoPage() {
      const { loggedIn } = useContext(AuthContext);

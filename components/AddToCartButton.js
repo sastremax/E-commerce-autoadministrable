@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
 import { AuthContext } from "providers/AuthProvider";
 import Swal from "sweetalert2";
-import Button from "@/components/Button";
+import Button from "./Button";
 
 const AddToCartButton = ({ producto }) => {
     const { addToCart } = useContext(CartContext);

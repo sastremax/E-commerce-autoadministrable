@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { CartContext } from "providers/CartContext";
-import Button from "@/components/Button";
+import Button from "./Button";
 
 export default function ProductClient({ producto }) {
     const { addToCart } = useContext(CartContext);

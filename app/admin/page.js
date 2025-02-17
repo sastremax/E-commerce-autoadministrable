@@ -7,14 +7,14 @@ import { db } from "@/utils/config";
 import { collection, getDocs } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { AuthContext } from "@/providers/AuthProvider";
-import Button from "@/components/Button";
+import Button from "../../components/Button";
 
 const AdminPage = () => {
 
     const { loggedIn, role } = useContext(AuthContext);
     const router = useRouter();
     const [selectedAction, setSelectedAction] = useState("none");
-    const [productId, setProductId] = useState(null);
+    const [productoId, setProductoId] = useState(null);
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -116,7 +116,7 @@ const AdminPage = () => {
             {selectedAction !== "none" && (
                 <div className="space-y-4">
                     {selectedAction === "add" ? (
-                        <ProductForm selectedAction={selectedAction} productId={null} setSelectedAction={setSelectedAction} />
+                        <ProductForm selectedAction={selectedAction} productoId={null} setSelectedAction={setSelectedAction} />
                     ) : (
                         <div>
                             <label htmlFor="productSelect" className="block text-sm font-medium text-gray-700">
@@ -125,8 +125,8 @@ const AdminPage = () => {
                             <select
                                 id="productSelect"
                                 className="w-full p-2 border-gray-300 rounded-md"
-                                value={productId || ""}
-                                onChange={(e) => setProductId(e.target.value)}
+                                value={productoId || ""}
+                                onChange={(e) => setProductoId(e.target.value)}
                             >
                                 <option value="">Seleccionar Producto</option>
                                 {productos.map((producto) => (
@@ -135,8 +135,8 @@ const AdminPage = () => {
                                     </option>
                                 ))}
                             </select>
-                            {selectedAction !== "add" && productId && (
-                                <ProductForm selectedAction={selectedAction} productId={productId} setSelectedAction={setSelectedAction} />
+                            {selectedAction !== "add" && productoId && (
+                                <ProductForm selectedAction={selectedAction} productoId={productoId} setSelectedAction={setSelectedAction} />
                             )}
                         </div>
                     )}

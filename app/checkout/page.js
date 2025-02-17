@@ -5,7 +5,7 @@ import { collection, addDoc, doc, updateDoc, getDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import { db } from "@/utils/config";
 import { CartContext } from "../../providers/CartContext";
-import Button from "@/components/Button";
+import Button from "../../components/Button";
 
 const CheckoutPage = () => {
     const { cartItems } = useContext(CartContext);

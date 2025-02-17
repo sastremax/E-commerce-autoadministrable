@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { db } from "@/utils/config";
 import { doc, addDoc, updateDoc, getDocs, getDoc, deleteDoc, collection } from "firebase/firestore";
-import Button from "@/components/Button";
+import Button from "./Button";
 
 const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
     const [name, setName] = useState("");
@@ -205,7 +205,7 @@ const ProductForm = ({ selectedAction, productoId, setSelectedAction }) => {
                             className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 focus:ring-blue-600 border-gray-300"
                             value={productoId || ""}
                             onChange={(e) => {
-                                setProductId(e.target.value)
+                                setProductoId(e.target.value);
                             }}
                         >
                             <option value="">Seleccionar Producto</option>
